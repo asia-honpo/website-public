@@ -465,6 +465,16 @@
   .rep-sig::before{
     content:"";width:24px;height:1px;background:var(--ink);
   }
+  .rep-statement{
+    margin-top:80px;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .rep-statement .rep-message{
+    max-width:none;
+    margin-bottom:24px;
+  }
 
   /* ---------- N°03 Timeline ---------- */
   .timeline{position:relative;margin-top:24px}
@@ -875,18 +885,9 @@
     <div class="rep-grid">
       <div>
         <div class="rep-photo" aria-hidden="true">
-          <div class="ph-bg"></div>
-          <svg class="silhouette" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-            <!-- shoulders/torso -->
-            <path d="M20 240 C 20 175 50 160 100 158 C 150 160 180 175 180 240 Z" fill="rgba(12,68,124,.55)"/>
-            <!-- neck -->
-            <rect x="86" y="130" width="28" height="32" fill="rgba(12,68,124,.65)"/>
-            <!-- head -->
-            <ellipse cx="100" cy="100" rx="40" ry="48" fill="rgba(12,68,124,.85)"/>
-          </svg>
+          <div class="ph-bg" style="background:url('/images/representative-portrait.jpg') center/cover no-repeat;"></div>
           <div class="corner">FIG. 04 / REPRESENTATIVE</div>
           <div class="tag">PORTRAIT</div>
-          <div class="footnote">— 代表者写真 / portrait placeholder</div>
         </div>
         <div class="rep-card">
           <h3 class="name-jp">大野 弘智<span class="reading">(おおの ひろとし)</span></h3>
@@ -905,14 +906,16 @@
           多言語(<span class="nb">日本語・英語・中国語</span>)に対応し、<span class="nb">10年以上の海外向けネット通販運営</span>を率いてきた。
         </p>
 
-        <div class="rep-message">
-          <p>
-            <span class="nb">Microsoft</span>、<span class="nb">Amazon</span> という大企業で学んだ知見を活かしつつ、自分たちの手でブランドを作り、<span class="nb">世界9カ国</span>のお客様にお届けしてきました。次の<span class="nb">10年</span>は、信頼できるものづくりのパートナーの皆様とともに歩んでいきたいと考えています。
-          </p>
-        </div>
-
-        <div class="rep-sig">代表取締役 大野 弘智</div>
       </div>
+    </div>
+
+    <div class="rep-statement">
+      <div class="rep-message">
+        <p>
+          <span class="nb">Microsoft</span>、<span class="nb">Amazon</span> という大企業で学んだ知見を活かしつつ、自分たちの手でブランドを作り、<span class="nb">世界9カ国</span>のお客様にお届けしてきました。次の<span class="nb">10年</span>は、信頼できるものづくりのパートナーの皆様とともに歩んでいきたいと考えています。
+        </p>
+      </div>
+      <div class="rep-sig">代表取締役 大野 弘智</div>
     </div>
   </div>
 </section>
