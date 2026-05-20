@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>お問い合わせ — 株式会社アジア本舗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#185FA5;
+    --navy-deep:#0C447C;
+    --coral:#D85A30;
+    --ink:#1A1A18;
+    --body:#444441;
+    --muted:#888780;
+    --line:#E3E0D6;
+    --line-2:#D8D4C7;
+    --bg:#FFFFFF;
+    --bg-warm:#F1EFE8;
+    --bg-warmer:#E8E5DA;
+    --serif:'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:'Noto Sans JP', 'Yu Gothic', sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --num:'Cormorant Garamond', 'Noto Serif JP', serif;
+    --max:1240px;
+    --pad:48px;
+    --form:720px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--sans);
+    color:var(--body);
+    background:var(--bg);
+    font-size:15px;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    line-break:strict;
+    text-wrap:pretty;
+    hanging-punctuation:allow-end;
+  }
+  .topbar, nav.primary a, .foot-bottom, .corner, .tag, .footnote,
+  .foot-col h6, .foot-brand .reg, .topbar .meta,
+  .kicker, .essay-label, .help, .direct-card .lbl, .crumbs{
+    word-break:normal;
+    line-break:auto;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .nb{white-space:nowrap}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{border-bottom:1px solid var(--line);background:var(--bg);font-size:12px;color:var(--muted)}
+  .topbar-inner{display:flex;justify-content:space-between;align-items:center;height:34px}
+  .topbar .lang{display:flex;gap:18px;letter-spacing:.08em}
+  .topbar .lang a.is-active{color:var(--ink)}
+  .topbar .meta{display:flex;gap:22px;letter-spacing:.04em}
+  .topbar .meta .dot{width:5px;height:5px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:8px;vertical-align:middle}
+
+  /* ---------- Header ---------- */
+  header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:baseline;gap:14px}
+  .brand .mark{
+    width:40px;height:40px;flex:none;background:var(--navy);color:#fff;
+    display:grid;place-items:center;
+    font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.02em;
+    position:relative;align-self:center;
+  }
+  .brand .mark::after{content:"";position:absolute;inset:auto -4px -4px auto;width:8px;height:8px;background:var(--coral)}
+  .brand .name{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:18px;letter-spacing:.04em;line-height:1.1}
+  .brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-top:3px;display:block}
+  nav.primary{display:flex;align-items:center;gap:38px}
+  nav.primary a{font-size:13.5px;color:var(--ink);letter-spacing:.04em;position:relative;padding:6px 0}
+  nav.primary a.is-active{color:var(--coral)}
+  nav.primary a.is-active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--coral)}
+  nav.primary a:hover{color:var(--navy)}
+  .nav-cta{
+    font-family:var(--sans);font-size:13px;letter-spacing:.06em;
+    border:1px solid var(--line-2);padding:11px 22px;color:var(--muted);
+    display:inline-flex;align-items:center;gap:10px;
+    pointer-events:none;
+  }
+
+  /* ---------- Hero ---------- */
+  .page-hero{padding:110px 0 96px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .page-hero .eyebrow{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted);
+    margin-bottom:48px;
+  }
+  .page-hero .eyebrow::before{content:"";width:36px;height:1px;background:var(--coral)}
+  .page-hero h1{
+    font-family:var(--serif);font-weight:500;color:var(--navy-deep);
+    font-size:72px;line-height:1.3;letter-spacing:.06em;
+    margin:0 0 28px;
+  }
+  .page-hero .sub{
+    font-family:var(--serif);font-style:italic;color:var(--muted);
+    font-size:22px;line-height:1.8;letter-spacing:.04em;
+    margin:0;max-width:720px;font-weight:400;
+  }
+  .page-hero .crumbs{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+    color:var(--muted);margin-top:64px;padding-top:24px;
+    border-top:1px solid var(--line);text-transform:uppercase;
+  }
+  .page-hero .crumbs .sep{opacity:.5}
+  .page-hero .crumbs a{color:var(--muted)}
+  .page-hero .crumbs .here{color:var(--ink)}
+
+  /* ---------- Section common ---------- */
+  .section{padding:120px 0;border-bottom:1px solid var(--line)}
+  .section.alt{background:var(--bg-warm);border-bottom:1px solid var(--line-2)}
+  .section-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--form)) 1fr;
+    column-gap:64px;
+    align-items:start;
+  }
+  .essay-label{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    border-top:1px solid var(--ink);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+    position:sticky;top:120px;
+  }
+  .essay-label .no{
+    font-family:var(--num);font-style:italic;
+    font-size:18px;color:var(--ink);letter-spacing:.04em;
+  }
+  .section-head h2{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:44px;line-height:1.4;letter-spacing:.04em;
+    margin:0 0 14px;
+  }
+  .section-head .en{
+    display:block;
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:16px;letter-spacing:.1em;
+    margin-bottom:56px;
+  }
+  .section-head h2.sm{font-size:36px;margin-bottom:10px}
+
+  /* ---------- Form ---------- */
+  .form-body{max-width:var(--form)}
+  .field{margin-bottom:36px}
+  .field:last-child{margin-bottom:0}
+  .field label{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin-bottom:10px;
+    font-family:var(--serif);font-weight:500;
+    font-size:15px;color:var(--ink);letter-spacing:.06em;
+  }
+  .field label .opt{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    color:var(--muted);text-transform:uppercase;
+    font-weight:400;
+  }
+  .field label .req{
+    color:var(--coral);
+    font-family:var(--serif);
+    margin-left:6px;font-weight:500;font-size:16px;
+  }
+  .field .help{
+    font-size:12px;line-height:1.7;color:var(--muted);
+    margin-top:8px;
+    font-family:var(--sans);letter-spacing:.02em;
+  }
+  .field input[type=text],
+  .field input[type=email],
+  .field input[type=tel],
+  .field select,
+  .field textarea{
+    width:100%;
+    background:#fff;
+    border:1px solid var(--line-2);
+    border-radius:0;
+    padding:15px 16px;
+    font-family:var(--sans);
+    font-size:15px;
+    color:var(--ink);
+    line-height:1.6;
+    letter-spacing:.04em;
+    outline:none;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .field input::placeholder, .field textarea::placeholder{
+    color:#b2b0a6;
+    font-family:var(--sans);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--navy-deep);
+    box-shadow:inset 0 -2px 0 var(--navy-deep);
+  }
+  .field select{
+    appearance:none;-webkit-appearance:none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+      linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position:
+      calc(100% - 22px) calc(50% - 2px),
+      calc(100% - 16px) calc(50% - 2px);
+    background-size:6px 6px, 6px 6px;
+    background-repeat:no-repeat;
+    padding-right:48px;
+    font-family:var(--serif);
+  }
+  .field textarea{
+    min-height:172px;
+    resize:vertical;
+    font-family:var(--sans);
+  }
+
+  /* Consent checkbox */
+  .consent{
+    margin:8px 0 36px;
+    display:flex;align-items:flex-start;gap:14px;
+    font-family:var(--serif);font-size:14px;line-height:1.7;color:var(--ink);
+    letter-spacing:.04em;
+  }
+  .consent input{
+    appearance:none;-webkit-appearance:none;
+    width:18px;height:18px;flex:none;
+    border:1px solid var(--muted);
+    background:#fff;
+    margin-top:3px;
+    position:relative;
+    cursor:pointer;
+    border-radius:0;
+  }
+  .consent input:checked{background:var(--navy-deep);border-color:var(--navy-deep)}
+  .consent input:checked::after{
+    content:"";
+    position:absolute;left:5px;top:1px;
+    width:5px;height:10px;
+    border:solid #fff;border-width:0 2px 2px 0;
+    transform:rotate(45deg);
+  }
+  .consent a{color:var(--navy);border-bottom:1px solid var(--navy);padding-bottom:1px}
+  .consent .req{color:var(--coral);margin-left:4px;font-weight:500}
+
+  /* Submit */
+  .submit-row{margin-top:12px}
+  .submit-btn{
+    width:100%;
+    background:var(--coral);
+    color:#fff;
+    border:1px solid var(--coral);
+    border-radius:0;
+    padding:22px 30px;
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:19px;
+    letter-spacing:.1em;
+    cursor:pointer;
+    transition:.2s;
+    display:flex;align-items:center;justify-content:center;gap:18px;
+  }
+  .submit-btn:hover{background:var(--navy-deep);border-color:var(--navy-deep)}
+  .submit-btn .arr{font-family:var(--mono);font-size:15px;letter-spacing:.1em}
+  .submit-note{
+    margin-top:18px;
+    font-family:var(--mono);
+    font-size:10.5px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    text-align:center;
+  }
+
+  /* Success message (hidden) */
+  .success{
+    display:none;
+    background:var(--bg-warm);
+    border:1px solid var(--line-2);
+    border-left:3px solid var(--coral);
+    padding:28px 32px;
+    margin-top:36px;
+    font-family:var(--serif);
+    font-size:16px;line-height:1.9;color:var(--ink);
+    letter-spacing:.04em;
+  }
+  .success.is-on{display:block}
+  .success .kc{
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;
+    color:var(--coral);text-transform:uppercase;
+    margin-bottom:10px;
+    display:block;
+  }
+
+  /* ---------- N°02 Direct ---------- */
+  .direct-card{
+    background:var(--bg-warm);
+    border-left:3px solid var(--coral);
+    padding:32px 36px;
+    margin:24px 0 36px;
+    max-width:var(--form);
+  }
+  .direct-card .lbl{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--coral);
+    text-transform:uppercase;
+    margin-bottom:10px;
+    display:block;
+  }
+  .direct-card .mail{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:26px;letter-spacing:.04em;
+    word-break:break-all;
+  }
+  .legal-card{
+    border-top:1px solid var(--line-2);
+    padding-top:24px;
+    max-width:var(--form);
+  }
+  .legal-card .name{
+    font-family:var(--serif);font-weight:500;font-size:15px;color:var(--ink);
+    letter-spacing:.04em;margin-bottom:4px;
+  }
+  .legal-card .en{
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:12px;letter-spacing:.12em;
+    margin-bottom:16px;display:block;
+  }
+  .legal-card .addr{
+    font-size:14px;line-height:1.9;color:var(--body);
+    margin-bottom:10px;
+  }
+  .legal-card .rep{
+    font-size:14px;color:var(--body);
+    font-family:var(--serif);letter-spacing:.04em;
+  }
+  .section-head .intro{
+    font-size:15.5px;line-height:2;color:var(--body);
+    margin:0 0 14px;max-width:var(--form);
+  }
+
+  /* ---------- N°03 Policy ---------- */
+  .policy-body{max-width:var(--form);font-size:15.5px;line-height:2;color:var(--body)}
+  .policy-body p{margin:0}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--bg);border-top:1px solid var(--line);padding:80px 0 40px;color:var(--body)}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid var(--line)}
+  .foot-brand .name{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);margin-bottom:6px}
+  .foot-brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:24px;display:block}
+  .foot-brand .addr{font-size:13px;line-height:1.9;color:var(--body);margin-bottom:14px}
+  .foot-brand .reg{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);line-height:1.9}
+  .foot-col h6{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .foot-col ul{list-style:none;margin:0;padding:0}
+  .foot-col li{margin-bottom:14px;font-size:13.5px}
+  .foot-col li a{color:var(--ink);font-family:var(--serif)}
+  .foot-col li a:hover{color:var(--navy)}
+  .foot-col li .sub{display:block;font-size:11px;color:var(--muted);font-family:var(--sans);margin-top:2px;letter-spacing:.04em}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:11.5px;font-family:var(--mono);letter-spacing:.12em;color:var(--muted)}
+  .foot-bottom .legal{display:flex;gap:24px}
+  .foot-bottom .legal a:hover{color:var(--ink)}
+
+  @media (max-width: 1100px){
+    .page-hero h1{font-size:48px}
+    .section-frame{grid-template-columns:1fr;gap:24px}
+    .essay-label{position:static}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="lang">
+      <a class="is-active" href="#">JP</a>
+      <a href="#">EN</a>
+    </div>
+    <div class="meta">
+      <span><span class="dot"></span>Tokyo, Japan — 設立 2015</span>
+      <span>SCANDINOVIA / Amazon 9 Markets</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="mark">亞</span>
+      <span>
+        <span class="name">株式会社アジア本舗</span>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+      </span>
+    </a>
+    <nav class="primary">
+      <a href="/">Home</a>
+      <a href="/business">事業について</a>
+      <a href="/company">会社概要</a>
+      <a href="/journal">越境ECで、10年やってきて。</a>
+      <a class="is-active" href="/contact">お問い合わせ</a>
+      <span class="nav-cta">Contact <span class="arr">●</span></span>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact — Get in touch</div>
+    <h1>お問い合わせ</h1>
+    <p class="sub">— お話を伺うところから、始めさせてください。</p>
+    <div class="crumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="here">Contact — お問い合わせ</span>
+    </div>
+  </div>
+</section>
+
+<!-- N°01 Form -->
+<section class="section">
+  <div class="wrap section-frame">
+    <div class="essay-label">
+      <span>Form</span>
+      <span class="no">N°01</span>
+    </div>
+
+    <div class="section-head">
+      <h2>お問い合わせフォーム</h2>
+      <span class="en">— Tell us how we can help.</span>
+
+      <div class="form-body" id="contact-form">
+
+        <!-- ① ご用件 -->
+        <div class="field">
+          <label for="f-topic">
+            <span>ご用件<span class="req">*</span></span>
+            <span class="opt">— Required</span>
+          </label>
+          <select id="f-topic" name="topic" required>
+            <option value="" selected disabled>(選択してください)</option>
+            <option>製造パートナーに関するご相談</option>
+            <option>商品(SCANDINOVIA)に関するお問い合わせ</option>
+            <option>メディア・取材のご相談</option>
+            <option>採用・キャリアに関するご相談</option>
+            <option>その他</option>
+          </select>
+          <div class="help">お問い合わせの種類をお選びください。</div>
+        </div>
+
+        <!-- ② お名前 -->
+        <div class="field">
+          <label for="f-name">
+            <span>お名前<span class="req">*</span></span>
+            <span class="opt">— Required</span>
+          </label>
+          <input type="text" id="f-name" name="name" placeholder="例:大野 弘智" required>
+        </div>
+
+        <!-- ③ 会社名・屋号 -->
+        <div class="field">
+          <label for="f-company">
+            <span>会社名・屋号<span class="req">*</span></span>
+            <span class="opt">— Required</span>
+          </label>
+          <input type="text" id="f-company" name="company" placeholder="例:株式会社○○○、または個人事業主の屋号" required>
+          <div class="help">個人事業主の方は屋号をご記入ください。</div>
+        </div>
+
+        <!-- ④ メールアドレス -->
+        <div class="field">
+          <label for="f-email">
+            <span>メールアドレス<span class="req">*</span></span>
+            <span class="opt">— Required</span>
+          </label>
+          <input type="email" id="f-email" name="email" placeholder="例:contact@example.com" required>
+        </div>
+
+        <!-- ⑤ お電話番号 -->
+        <div class="field">
+          <label for="f-tel">
+            <span>お電話番号(任意)</span>
+            <span class="opt">— Optional</span>
+          </label>
+          <input type="tel" id="f-tel" name="tel" placeholder="例:03-1234-5678">
+          <div class="help">お急ぎの場合のみご記入ください。</div>
+        </div>
+
+        <!-- ⑥ お問い合わせ内容 -->
+        <div class="field">
+          <label for="f-message">
+            <span>お問い合わせ内容<span class="req">*</span></span>
+            <span class="opt">— Required</span>
+          </label>
+          <textarea id="f-message" name="message" placeholder="お問い合わせ内容を、できるだけ具体的にご記入ください。" required></textarea>
+          <div class="help">ご質問・ご相談、何でもお気軽にお書きください。</div>
+        </div>
+
+        <!-- ⑦ 個人情報の同意 -->
+        <label class="consent" for="f-consent">
+          <input type="checkbox" id="f-consent" name="consent" required>
+          <span>
+            <a href="/privacy">プライバシーポリシー</a>を確認の上、内容に同意します<span class="req">*</span>
+          </span>
+        </label>
+
+        <!-- ⑧ Submit -->
+        <div class="submit-row">
+          <button type="button" class="submit-btn" id="submit-btn">
+            送信する
+            <span class="arr">───→</span>
+          </button>
+          <div class="submit-note">— Typical reply within 2 business days —</div>
+        </div>
+
+        <!-- ⑨ Success message (hidden) -->
+        <div class="success" id="success-msg" role="status" aria-live="polite">
+          <span class="kc">Thank you — お問い合わせを受け付けました</span>
+          お問い合わせいただきありがとうございます。<span class="nb">通常 2 営業日以内</span>にご返信いたします。
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- N°02 Direct -->
+<section class="section alt">
+  <div class="wrap section-frame">
+    <div class="essay-label">
+      <span>Direct</span>
+      <span class="no">N°02</span>
+    </div>
+
+    <div class="section-head">
+      <h2 class="sm">直接ご連絡をご希望の方へ</h2>
+      <span class="en">— For direct inquiries.</span>
+
+      <p class="intro">
+        フォームを介さず、直接ご連絡をご希望の方は、以下のメールアドレスまでお問い合わせください。
+      </p>
+
+      <div class="direct-card">
+        <span class="lbl">Direct</span>
+        <div class="mail"><span class="nb">info@asiahonpo.co.jp</span></div>
+      </div>
+
+      <div class="legal-card">
+        <div class="name">株式会社アジア本舗</div>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+        <div class="addr">
+          <span class="nb">〒171-0031</span> <span class="nb">東京都豊島区目白2-3-15</span><br>
+          <span class="nb">ソフィア目白 1003号</span>
+        </div>
+        <div class="rep">代表取締役 <span class="nb">大野 弘智</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- N°03 Policy -->
+<section class="section">
+  <div class="wrap section-frame">
+    <div class="essay-label">
+      <span>Policy</span>
+      <span class="no">N°03</span>
+    </div>
+
+    <div class="section-head">
+      <h2 class="sm">ご返信について</h2>
+      <span class="en">— Typical reply within 2 business days.</span>
+
+      <div class="policy-body">
+        <p>
+          通常、<span class="nb">2営業日以内</span>にご返信いたします。土日祝日にお問い合わせいただいた場合、翌営業日以降のご返信となります。お問い合わせの内容によっては、ご返信にお時間をいただく場合がございますので、あらかじめご了承ください。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">株式会社アジア本舗</div>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+        <div class="addr">
+          〒171-0031 東京都豊島区目白2-3-15<br>
+          ソフィア目白 1003号
+        </div>
+        <div class="reg">
+          EST. 2015 — TOKYO, JAPAN<br>
+          BRAND : SCANDINOVIA® / 9 MARKETS
+        </div>
+      </div>
+      <div class="foot-col">
+        <h6>Sitemap</h6>
+        <ul>
+          <li><a href="/">Home<span class="sub">ホーム</span></a></li>
+          <li><a href="/business">事業について<span class="sub">Our business</span></a></li>
+          <li><a href="/company">会社概要<span class="sub">Company profile</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>More</h6>
+        <ul>
+          <li><a href="/journal">越境ECで、10年やってきて。<span class="sub">10 years in cross-border EC</span></a></li>
+          <li><a href="/contact">お問い合わせ<span class="sub">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Markets</h6>
+        <ul>
+          <li><a>JP / US / CA / MX<span class="sub">Amazon channels</span></a></li>
+          <li><a>UK / DE / FR / IT / ES<span class="sub">Amazon channels</span></a></li>
+          <li><a><span class="nb">Amazon倉庫の拠点</span> — <span class="nb">米国 / 英国 / フランス / 日本</span><span class="sub">Fulfillment network</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2015–2026 ASIA HONPO CO., LTD. ALL RIGHTS RESERVED.</div>
+      <div class="legal">
+        <a href="/privacy">PRIVACY POLICY</a>
+        <a href="/terms">TERMS</a>
+        <a href="/tokutei">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Light client-side preview: validate required fields and reveal success message
+  document.getElementById('submit-btn').addEventListener('click', function(){
+    var form = document.getElementById('contact-form');
+    var reqs = form.querySelectorAll('[required]');
+    var ok = true;
+    reqs.forEach(function(el){
+      if (el.type === 'checkbox') {
+        if (!el.checked) ok = false;
+      } else if (!el.value || (el.type==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))) {
+        ok = false;
+      }
+      if (!ok) {
+        el.focus && el.focus();
+      }
+    });
+    if (!ok) return;
+    document.getElementById('success-msg').classList.add('is-on');
+    document.getElementById('submit-btn').textContent = 'ありがとうございました';
+    document.getElementById('submit-btn').disabled = true;
+    document.getElementById('submit-btn').style.background = 'var(--navy-deep)';
+    document.getElementById('submit-btn').style.borderColor = 'var(--navy-deep)';
+    document.getElementById('success-msg').scrollIntoView ? null : null;
+  });
+</script>
+
+</body>
+</html>

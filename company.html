@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>会社概要 — 株式会社アジア本舗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#185FA5;
+    --navy-deep:#0C447C;
+    --coral:#D85A30;
+    --ink:#1A1A18;
+    --body:#444441;
+    --muted:#888780;
+    --line:#E3E0D6;
+    --line-2:#D8D4C7;
+    --bg:#FFFFFF;
+    --bg-warm:#F1EFE8;
+    --bg-warmer:#E8E5DA;
+    --serif:'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:'Noto Sans JP', 'Yu Gothic', sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --num:'Cormorant Garamond', 'Noto Serif JP', serif;
+    --max:1240px;
+    --pad:48px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--sans);
+    color:var(--body);
+    background:var(--bg);
+    font-size:15px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    line-break:strict;
+    text-wrap:pretty;
+    hanging-punctuation:allow-end;
+  }
+  /* Latin-only blocks: revert so monospace/Cormorant labels behave naturally */
+  .topbar, nav.primary a, .foot-bottom,
+  .hero-meta dt, .corner, .tag, .footnote,
+  .foot-col h6, .foot-brand .reg, .cta-direct .k,
+  .cta-coral .small, .topbar .meta,
+  .ix, .kicker, .info-key, .tl-year{
+    word-break:normal;
+    line-break:auto;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .nb{white-space:nowrap}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    border-bottom:1px solid var(--line);
+    background:var(--bg);
+    font-size:12px;
+    color:var(--muted);
+  }
+  .topbar-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    height:34px;
+  }
+  .topbar .lang{display:flex;gap:18px;letter-spacing:.08em}
+  .topbar .lang a.is-active{color:var(--ink)}
+  .topbar .meta{display:flex;gap:22px;letter-spacing:.04em}
+  .topbar .meta .dot{width:5px;height:5px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:8px;vertical-align:middle}
+
+  /* ---------- Header / Nav ---------- */
+  header.site{
+    border-bottom:1px solid var(--line);
+    background:var(--bg);
+    position:sticky;top:0;z-index:50;
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:84px;
+  }
+  .brand{display:flex;align-items:baseline;gap:14px}
+  .brand .mark{
+    width:40px;height:40px;flex:none;
+    background:var(--navy);
+    color:#fff;
+    display:grid;place-items:center;
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:.02em;
+    position:relative;
+    align-self:center;
+  }
+  .brand .mark::after{
+    content:"";position:absolute;inset:auto -4px -4px auto;
+    width:8px;height:8px;background:var(--coral);
+  }
+  .brand .name{
+    font-family:var(--serif);
+    font-weight:600;
+    color:var(--ink);
+    font-size:18px;
+    letter-spacing:.04em;
+    line-height:1.1;
+  }
+  .brand .en{
+    font-family:var(--num);
+    font-style:italic;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:.12em;
+    margin-top:3px;
+    display:block;
+  }
+  nav.primary{display:flex;align-items:center;gap:38px}
+  nav.primary a{
+    font-size:13.5px;
+    color:var(--ink);
+    letter-spacing:.04em;
+    position:relative;
+    padding:6px 0;
+  }
+  nav.primary a.is-active{color:var(--navy)}
+  nav.primary a.is-active::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--navy);
+  }
+  nav.primary a:hover{color:var(--navy)}
+  .nav-cta{
+    font-family:var(--sans);
+    font-size:13px;
+    letter-spacing:.06em;
+    border:1px solid var(--ink);
+    padding:11px 22px;
+    color:var(--ink);
+    display:inline-flex;align-items:center;gap:10px;
+    transition:.2s;
+  }
+  .nav-cta:hover{background:var(--ink);color:#fff}
+
+  /* ---------- Page Hero ---------- */
+  .page-hero{
+    background:var(--bg);
+    padding:80px 0 72px;
+    border-bottom:1px solid var(--line);
+  }
+  .page-hero .eyebrow{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:32px;
+  }
+  .page-hero .eyebrow::before{
+    content:"";width:36px;height:1px;background:var(--navy);
+  }
+  .page-hero h1{
+    font-family:var(--serif);
+    font-weight:500;
+    color:var(--navy-deep);
+    font-size:54px;
+    line-height:1.3;
+    letter-spacing:.06em;
+    margin:0 0 28px;
+  }
+  .page-hero .sub{
+    font-family:var(--serif);
+    font-size:20px;
+    line-height:1.85;
+    color:var(--ink);
+    max-width:640px;
+    margin:0;
+    letter-spacing:.04em;
+    font-weight:500;
+  }
+  .page-hero .crumbs{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;
+    color:var(--muted);
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    text-transform:uppercase;
+  }
+  .page-hero .crumbs .sep{opacity:.5}
+  .page-hero .crumbs a{color:var(--muted)}
+  .page-hero .crumbs .here{color:var(--ink)}
+
+  /* ---------- Section common ---------- */
+  .section{padding:120px 0;border-bottom:1px solid var(--line)}
+  .section.alt{background:var(--bg-warm);border-bottom:1px solid var(--line-2)}
+  .section-head{
+    display:grid;grid-template-columns:240px 1fr;gap:48px;
+    margin-bottom:64px;
+    align-items:start;
+  }
+  .kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    border-top:1px solid var(--ink);
+    padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .kicker .no{
+    font-family:var(--num);
+    font-style:italic;
+    font-size:18px;
+    color:var(--ink);
+    letter-spacing:.04em;
+  }
+  .section-head h2{
+    font-family:var(--serif);
+    font-weight:500;
+    color:var(--ink);
+    font-size:40px;
+    line-height:1.45;
+    letter-spacing:.04em;
+    margin:0;
+  }
+  .section-head h2 .en{
+    display:block;
+    font-family:var(--num);
+    font-style:italic;
+    font-weight:400;
+    font-size:15px;
+    color:var(--muted);
+    letter-spacing:.1em;
+    margin-top:12px;
+  }
+
+  /* ---------- N°01 Company info table ---------- */
+  .info-body{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:80px;
+    align-items:start;
+  }
+  .info-table{
+    border-top:1px solid var(--ink);
+  }
+  .info-row{
+    display:grid;grid-template-columns:180px 1fr;gap:32px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line-2);
+    align-items:baseline;
+  }
+  .info-key{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    line-height:1.5;
+  }
+  .info-key .jp{
+    display:block;
+    font-family:var(--serif);
+    font-size:14px;color:var(--ink);
+    text-transform:none;
+    letter-spacing:.06em;
+    margin-top:4px;
+    word-break:keep-all;
+  }
+  .info-val{
+    font-family:var(--serif);
+    font-size:15.5px;
+    color:var(--ink);
+    line-height:1.85;
+    letter-spacing:.02em;
+  }
+  .info-val .en-aside{
+    font-family:var(--num);
+    font-style:italic;
+    color:var(--muted);
+    font-size:14px;
+    margin-left:8px;
+    letter-spacing:.06em;
+  }
+  .info-val .historical{
+    color:var(--muted);
+    font-size:13.5px;
+    font-family:var(--sans);
+    display:block;margin-top:4px;
+  }
+
+  .info-aside{
+    background:var(--bg-warm);
+    padding:28px 28px 32px;
+    border-top:2px solid var(--coral);
+    align-self:start;
+    position:sticky;top:120px;
+  }
+  .info-aside h4{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;
+    color:var(--muted);
+    text-transform:uppercase;
+    margin:0 0 18px;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line-2);
+  }
+  .info-aside .seal{
+    display:flex;align-items:center;gap:14px;margin-bottom:18px;
+  }
+  .info-aside .seal .mk{
+    width:44px;height:44px;
+    background:var(--navy);
+    color:#fff;
+    display:grid;place-items:center;
+    font-family:var(--serif);font-weight:600;font-size:20px;
+    position:relative;
+  }
+  .info-aside .seal .mk::after{
+    content:"";position:absolute;inset:auto -4px -4px auto;
+    width:8px;height:8px;background:var(--coral);
+  }
+  .info-aside .seal .name{
+    font-family:var(--serif);font-weight:500;font-size:15px;color:var(--ink);
+    line-height:1.3;
+  }
+  .info-aside .seal .en{
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:12px;letter-spacing:.12em;
+    margin-top:3px;display:block;
+  }
+  .info-aside ul{list-style:none;margin:0;padding:0}
+  .info-aside li{
+    display:grid;grid-template-columns:90px 1fr;gap:14px;
+    padding:12px 0;
+    border-bottom:1px dotted var(--line-2);
+    font-size:13.5px;
+  }
+  .info-aside li:last-child{border-bottom:none}
+  .info-aside li .k{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.18em;color:var(--muted);
+    text-transform:uppercase;padding-top:3px;
+  }
+  .info-aside li .v{
+    font-family:var(--serif);color:var(--ink);line-height:1.6;
+  }
+
+  /* ---------- N°02 Representative ---------- */
+  .rep-grid{
+    display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:80px;
+    align-items:start;
+  }
+  .rep-photo{
+    position:relative;
+    aspect-ratio:4/5;
+    background:var(--bg-warmer);
+    border:1px solid var(--line-2);
+    overflow:hidden;
+  }
+  .rep-photo .ph-bg{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 50% 38%, rgba(24,95,165,.18) 0, rgba(24,95,165,.05) 38%, transparent 60%),
+      repeating-linear-gradient(135deg, rgba(0,0,0,.04) 0, rgba(0,0,0,.04) 1px, transparent 1px, transparent 9px);
+  }
+  .rep-photo .silhouette{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:78%;
+  }
+  .rep-photo .corner{
+    position:absolute;top:0;left:0;background:#fff;
+    border-right:1px solid var(--line-2);border-bottom:1px solid var(--line-2);
+    padding:14px 18px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--muted);
+  }
+  .rep-photo .tag{
+    position:absolute;top:18px;right:18px;background:#fff;
+    padding:8px 12px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ink);
+    border:1px solid var(--line-2);
+  }
+  .rep-photo .footnote{
+    position:absolute;left:22px;right:22px;bottom:22px;
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+    color:var(--muted);
+  }
+  .rep-card{margin-top:24px}
+  .rep-card .name-jp{
+    font-family:var(--serif);font-weight:500;
+    color:var(--ink);font-size:24px;letter-spacing:.06em;
+    margin:0 0 4px;
+  }
+  .rep-card .name-jp .reading{
+    font-size:13px;color:var(--muted);font-weight:400;
+    margin-left:8px;letter-spacing:.04em;
+  }
+  .rep-card .name-en{
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:14px;letter-spacing:.08em;
+    margin:0 0 16px;
+  }
+  .rep-card .title{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.22em;
+    color:var(--coral);
+    text-transform:uppercase;
+    border-top:1px solid var(--coral);
+    padding-top:10px;
+  }
+  .rep-card .title .jp{
+    display:block;font-family:var(--serif);font-size:14px;color:var(--ink);
+    text-transform:none;letter-spacing:.06em;margin-top:4px;
+  }
+
+  .rep-text{padding-top:18px}
+  .rep-text .bio-label{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    padding-top:14px;border-top:1px solid var(--ink);
+    margin-bottom:20px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .rep-text .bio-label .no{
+    font-family:var(--num);font-style:italic;font-size:16px;color:var(--ink);
+  }
+  .rep-text .bio{
+    font-size:15.5px;line-height:2.1;
+    color:var(--body);
+    margin:0 0 48px;
+    max-width:620px;
+  }
+  .rep-message{
+    background:var(--bg-warm);
+    border-left:3px solid var(--coral);
+    padding:36px 40px 36px 40px;
+    margin-bottom:24px;
+    max-width:680px;
+  }
+  .rep-message p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:17px;line-height:2;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:.04em;
+    font-weight:400;
+  }
+  .rep-message::before{
+    content:"\201C";
+    font-family:var(--num);
+    font-size:64px;line-height:1;
+    color:var(--coral);
+    display:block;margin-bottom:6px;
+    font-style:italic;
+  }
+  .rep-sig{
+    font-family:var(--serif);
+    font-size:14.5px;color:var(--ink);
+    letter-spacing:.06em;
+    display:flex;align-items:center;gap:10px;
+  }
+  .rep-sig::before{
+    content:"";width:24px;height:1px;background:var(--ink);
+  }
+
+  /* ---------- N°03 Timeline ---------- */
+  .timeline{position:relative;margin-top:24px}
+  .timeline-rail{
+    position:absolute;left:0;right:24px;top:64px;
+    height:1px;background:var(--line-2);
+  }
+  .timeline-rail .progress{
+    position:absolute;left:0;top:0;height:1px;width:100%;
+    background:var(--navy);
+  }
+  .timeline-items{
+    display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;
+    position:relative;
+  }
+  .tl-item{position:relative;min-width:0}
+  .tl-year{
+    font-family:var(--num);
+    font-weight:500;font-size:36px;color:var(--ink);
+    line-height:1;letter-spacing:.02em;margin-bottom:18px;
+  }
+  .tl-dot{
+    width:14px;height:14px;
+    border:1px solid var(--navy);
+    background:var(--bg-warm);
+    border-radius:50%;
+    position:relative;margin-bottom:18px;
+  }
+  .tl-dot::after{
+    content:"";position:absolute;inset:3px;border-radius:50%;
+    background:var(--navy);
+  }
+  .tl-item.is-now .tl-year{color:var(--coral)}
+  .tl-item.is-now .tl-dot{
+    border-color:var(--coral);
+    width:18px;height:18px;margin-top:-2px;margin-left:-2px;
+  }
+  .tl-item.is-now .tl-dot::after{background:var(--coral)}
+  .tl-item.is-now .tl-dot::before{
+    content:"";position:absolute;inset:-6px;border-radius:50%;
+    border:1px solid var(--coral);opacity:.4;
+  }
+  .tl-badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:9.5px;letter-spacing:.2em;
+    color:#fff;background:var(--coral);
+    padding:3px 8px;margin-bottom:10px;
+  }
+  .tl-title{
+    font-family:var(--serif);font-weight:500;
+    font-size:15px;color:var(--ink);
+    margin:0 0 10px;letter-spacing:.04em;
+  }
+  .tl-item p{
+    margin:0 0 8px;
+    font-size:12.5px;line-height:1.85;color:var(--muted);
+    word-break:keep-all;line-break:strict;text-wrap:pretty;
+    hanging-punctuation:allow-end;
+  }
+  .tl-item p:last-child{margin-bottom:0}
+
+  /* ---------- N°04 Partners ---------- */
+  .partners{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;
+    border-top:1px solid var(--line-2);
+    border-bottom:1px solid var(--line-2);
+    background:#fff;
+  }
+  .partner{
+    padding:48px 32px 56px;
+    border-right:1px solid var(--line-2);
+    display:flex;flex-direction:column;
+    background:#fff;
+    min-width:0;
+  }
+  .partner:last-child{border-right:none}
+  .partner .pix{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--muted);
+    margin-bottom:32px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .partner .pix .pn{
+    font-family:var(--num);font-style:italic;
+    font-size:20px;color:var(--navy);letter-spacing:.04em;
+  }
+  .partner h3{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:20px;
+    margin:0 0 18px;
+    letter-spacing:.06em;
+    line-height:1.5;
+  }
+  .partner h3::after{
+    content:"";display:block;
+    width:20px;height:2px;background:var(--coral);
+    margin-top:16px;
+  }
+  .partner p{
+    margin:0;
+    font-size:14px;line-height:1.9;color:var(--body);
+  }
+  .partners-foot{
+    margin-top:48px;
+    display:grid;grid-template-columns:240px 1fr;gap:48px;
+    align-items:start;
+  }
+  .partners-foot .fn-label{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    padding-top:14px;border-top:1px solid var(--ink);
+  }
+  .partners-foot p{
+    margin:0;font-size:14px;line-height:2;color:var(--body);
+    max-width:680px;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-section{
+    background:var(--navy-deep);color:#fff;
+    padding:96px 0;position:relative;overflow:hidden;
+  }
+  .cta-section::before{
+    content:"";position:absolute;top:0;right:-100px;width:340px;height:100%;
+    background-image:repeating-linear-gradient(135deg,
+      rgba(255,255,255,.04) 0,
+      rgba(255,255,255,.04) 1px,
+      transparent 1px,transparent 12px);
+  }
+  .cta-grid{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:60px;
+    align-items:center;position:relative;
+  }
+  .cta-section .kicker-c{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.22em;
+    color:rgba(255,255,255,.55);
+    margin-bottom:28px;
+    text-transform:uppercase;
+    display:flex;align-items:center;gap:14px;
+  }
+  .cta-section .kicker-c::before{
+    content:"";width:36px;height:1px;background:var(--coral);
+  }
+  .cta-section h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:38px;line-height:1.45;letter-spacing:.04em;
+    margin:0 0 22px;color:#fff;
+  }
+  .cta-section p{
+    max-width:480px;color:rgba(255,255,255,.78);
+    font-size:14.5px;line-height:2;margin:0;
+  }
+  .cta-section .form-ref{
+    color:#9fb7d6;font-weight:600;font-family:var(--serif);
+    border-bottom:1px solid rgba(159,183,214,.4);padding-bottom:1px;
+  }
+  .cta-actions{
+    display:flex;flex-direction:column;gap:18px;
+    border-left:1px solid rgba(255,255,255,.15);
+    padding-left:60px;
+  }
+  .cta-coral{
+    display:inline-flex;align-items:center;justify-content:space-between;gap:30px;
+    font-family:var(--serif);font-size:18px;color:#fff;
+    background:var(--coral);padding:24px 30px;
+    letter-spacing:.06em;border:1px solid var(--coral);transition:.2s;
+  }
+  .cta-coral:hover{background:transparent}
+  .cta-coral .small{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.2em;
+    color:rgba(255,255,255,.7);
+    text-transform:uppercase;margin-top:6px;
+  }
+  .cta-coral .left{display:flex;flex-direction:column}
+  .cta-coral .arr{font-family:var(--mono);font-size:14px}
+  .cta-direct{
+    display:grid;grid-template-columns:auto 1fr;gap:18px;
+    padding:18px 4px 0;
+    font-size:13px;color:rgba(255,255,255,.7);
+  }
+  .cta-direct .k{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    color:rgba(255,255,255,.55);
+    text-transform:uppercase;padding-top:3px;
+  }
+  .cta-direct .v{font-family:var(--serif);color:#fff;line-height:1.6}
+
+  /* ---------- Footer ---------- */
+  footer.site{
+    background:var(--bg);border-top:1px solid var(--line);
+    padding:80px 0 40px;color:var(--body);
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;
+    padding-bottom:64px;border-bottom:1px solid var(--line);
+  }
+  .foot-brand .name{
+    font-family:var(--serif);font-weight:600;
+    font-size:18px;color:var(--ink);margin-bottom:6px;
+  }
+  .foot-brand .en{
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:12px;letter-spacing:.12em;
+    margin-bottom:24px;display:block;
+  }
+  .foot-brand .addr{
+    font-size:13px;line-height:1.9;color:var(--body);
+    margin-bottom:14px;
+  }
+  .foot-brand .reg{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.12em;color:var(--muted);
+    line-height:1.9;
+  }
+  .foot-col h6{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;
+    color:var(--muted);text-transform:uppercase;
+    margin:0 0 22px;padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+  }
+  .foot-col ul{list-style:none;margin:0;padding:0}
+  .foot-col li{margin-bottom:14px;font-size:13.5px}
+  .foot-col li a{color:var(--ink);font-family:var(--serif)}
+  .foot-col li a:hover{color:var(--navy)}
+  .foot-col li .sub{
+    display:block;font-size:11px;color:var(--muted);
+    font-family:var(--sans);margin-top:2px;letter-spacing:.04em;
+  }
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:28px;font-size:11.5px;
+    font-family:var(--mono);letter-spacing:.12em;color:var(--muted);
+  }
+  .foot-bottom .legal{display:flex;gap:24px}
+  .foot-bottom .legal a:hover{color:var(--ink)}
+
+  @media (max-width: 1100px){
+    .page-hero h1{font-size:42px}
+    .section-head{grid-template-columns:1fr;gap:18px}
+    .info-body{grid-template-columns:1fr;gap:48px}
+    .info-aside{position:static}
+    .rep-grid{grid-template-columns:1fr;gap:48px}
+    .timeline-items{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+    .timeline-rail{display:none}
+    .partners{grid-template-columns:repeat(2,1fr)}
+    .partner{border-bottom:1px solid var(--line-2)}
+    .partner:nth-child(2){border-right:none}
+    .partners-foot{grid-template-columns:1fr;gap:24px}
+    .cta-grid{grid-template-columns:1fr;gap:36px}
+    .cta-actions{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.15);padding-top:32px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="lang">
+      <a class="is-active" href="#">JP</a>
+      <a href="#">EN</a>
+    </div>
+    <div class="meta">
+      <span><span class="dot"></span>Tokyo, Japan — 設立 2015</span>
+      <span>SCANDINOVIA / Amazon 9 Markets</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="mark">亞</span>
+      <span>
+        <span class="name">株式会社アジア本舗</span>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+      </span>
+    </a>
+    <nav class="primary">
+      <a href="/">Home</a>
+      <a href="/business">事業について</a>
+      <a class="is-active" href="/company">会社概要</a>
+      <a href="/journal">越境ECで、10年やってきて。</a>
+      <a class="nav-cta" href="/contact">Contact <span class="arr">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Company profile — Asia Honpo Co., Ltd.</div>
+    <h1>会社概要</h1>
+    <p class="sub">
+      裏取りに、誠実に応える。事実を、そのままに。
+    </p>
+    <div class="crumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="here">Company — 会社概要</span>
+    </div>
+  </div>
+</section>
+
+<!-- N°01 Company info -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">
+        <span>Company</span>
+        <span class="no">N°01</span>
+      </div>
+      <h2>
+        会社情報
+        <span class="en">— The legal facts behind the brand.</span>
+      </h2>
+    </div>
+
+    <div class="info-body">
+      <div class="info-table">
+        <div class="info-row">
+          <div class="info-key">— 01 / Trade name<span class="jp">商号</span></div>
+          <div class="info-val"><span class="nb">株式会社アジア本舗</span><span class="en-aside">Asia Honpo Co., Ltd.</span></div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 02 / Founded<span class="jp">設立</span></div>
+          <div class="info-val">2015年6月2日</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 03 / Representative<span class="jp">代表者</span></div>
+          <div class="info-val">代表取締役 <span class="nb">大野 弘智</span><span class="en-aside">Hirotoshi Ono</span></div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 04 / Industry<span class="jp">業種</span></div>
+          <div class="info-val">小売業(無店舗販売)</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 05 / Business<span class="jp">事業内容</span></div>
+          <div class="info-val">自社ブランド「<span class="nb">SCANDINOVIA</span>」の<span class="nb">海外向けネット通販</span></div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 06 / Headquarters<span class="jp">本社所在地</span></div>
+          <div class="info-val">
+            <span class="nb">〒171-0031</span> <span class="nb">東京都豊島区目白2-3-15</span><br>
+            <span class="nb">ソフィア目白 1003号</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 07 / Former HQ<span class="jp">旧本店所在地</span></div>
+          <div class="info-val">
+            <span class="nb">大阪府吹田市古江台6-3-27</span>
+            <span class="historical">(2015年6月 〜 2021年9月)</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 08 / Fiscal year-end<span class="jp">決算期</span></div>
+          <div class="info-val">5月31日</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">— 09 / Contact<span class="jp">連絡先</span></div>
+          <div class="info-val"><span class="nb">info@asiahonpo.co.jp</span></div>
+        </div>
+      </div>
+
+      <aside class="info-aside" aria-label="Quick reference">
+        <h4>Quick reference</h4>
+        <div class="seal">
+          <div class="mk">亞</div>
+          <div>
+            <div class="name">株式会社アジア本舗</div>
+            <span class="en">ASIA HONPO CO., LTD.</span>
+          </div>
+        </div>
+        <ul>
+          <li><span class="k">EST.</span><span class="v">2015 / Tokyo</span></li>
+          <li><span class="k">Brand</span><span class="v">SCANDINOVIA®</span></li>
+          <li><span class="k">Channel</span><span class="v">Amazon 9カ国</span></li>
+          <li><span class="k">Hubs</span><span class="v">米国 / 英国 / フランス / 日本</span></li>
+          <li><span class="k">Direct</span><span class="v">info@asiahonpo.co.jp</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- N°02 Representative -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">
+        <span>Representative</span>
+        <span class="no">N°02</span>
+      </div>
+      <h2>
+        代表者プロフィール
+        <span class="en">— From Microsoft and Amazon, to building our own.</span>
+      </h2>
+    </div>
+
+    <div class="rep-grid">
+      <div>
+        <div class="rep-photo" aria-hidden="true">
+          <div class="ph-bg"></div>
+          <svg class="silhouette" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <!-- shoulders/torso -->
+            <path d="M20 240 C 20 175 50 160 100 158 C 150 160 180 175 180 240 Z" fill="rgba(12,68,124,.55)"/>
+            <!-- neck -->
+            <rect x="86" y="130" width="28" height="32" fill="rgba(12,68,124,.65)"/>
+            <!-- head -->
+            <ellipse cx="100" cy="100" rx="40" ry="48" fill="rgba(12,68,124,.85)"/>
+          </svg>
+          <div class="corner">FIG. 04 / REPRESENTATIVE</div>
+          <div class="tag">PORTRAIT</div>
+          <div class="footnote">— 代表者写真 / portrait placeholder</div>
+        </div>
+        <div class="rep-card">
+          <h3 class="name-jp">大野 弘智<span class="reading">(おおの ひろとし)</span></h3>
+          <div class="name-en">Hirotoshi Ono</div>
+          <span class="title">— Representative Director<span class="jp">代表取締役</span></span>
+        </div>
+      </div>
+
+      <div class="rep-text">
+        <div class="bio-label">
+          <span>Career — 経歴</span>
+          <span class="no">N°02.1</span>
+        </div>
+        <p class="bio">
+          <span class="nb">Microsoft</span>、<span class="nb">Amazon</span> を経て、<span class="nb">2015年</span>に<span class="nb">株式会社アジア本舗</span>を創業。
+          多言語(<span class="nb">日本語・英語・中国語</span>)に対応し、<span class="nb">10年以上の海外向けネット通販運営</span>を率いてきた。
+        </p>
+
+        <div class="rep-message">
+          <p>
+            <span class="nb">Microsoft</span>、<span class="nb">Amazon</span> という大企業で学んだ知見を活かしつつ、自分たちの手でブランドを作り、<span class="nb">世界9カ国</span>のお客様にお届けしてきました。次の<span class="nb">10年</span>は、信頼できるものづくりのパートナーの皆様とともに歩んでいきたいと考えています。
+          </p>
+        </div>
+
+        <div class="rep-sig">代表取締役 大野 弘智</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- N°03 Milestones -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">
+        <span>Milestones</span>
+        <span class="no">N°03</span>
+      </div>
+      <h2>
+        10年の歩み
+        <span class="en">— Milestones, 2015 → 2026.</span>
+      </h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-rail"><div class="progress"></div></div>
+      <div class="timeline-items">
+        <div class="tl-item">
+          <div class="tl-year">2015</div>
+          <div class="tl-dot"></div>
+          <h5 class="tl-title">設立</h5>
+          <p>大阪府吹田市にて事業を開始。日本のものづくりの良さを、海外のお客様に届けるために。</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2016</div>
+          <div class="tl-dot"></div>
+          <h5 class="tl-title">海外展開本格化</h5>
+          <p>欧米の主要市場への販売を本格化。自社ブランド SCANDINOVIA を立ち上げ、独自の商品作りを始める。</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <div class="tl-dot"></div>
+          <h5 class="tl-title">9カ国体制完成</h5>
+          <p>Amazon 9カ国・Amazon倉庫4拠点(米国・英国・フランス・日本)での販売とお届け体制が完成。多言語の運営チームを編成し、各国のお客様対応と商品紹介ページ作りも、すべて自社で行う仕組みが整う。</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2021</div>
+          <div class="tl-dot"></div>
+          <h5 class="tl-title">東京集約</h5>
+          <p>本店を東京・目白に移転(2021年9月)。経営から日々の運営まですべての機能を一拠点に集約。</p>
+        </div>
+        <div class="tl-item is-now">
+          <div class="tl-year">2026</div>
+          <div class="tl-dot"></div>
+          <span class="tl-badge">NOW</span>
+          <h5 class="tl-title">次の10年へ</h5>
+          <p>AIを取り入れた運営の仕組みを整え、新たな10年への基盤を完成。</p>
+          <p>ものづくりの現場と力を合わせ、世界のお客様の暮らしを支えていく。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- N°04 Partners -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">
+        <span>Partners</span>
+        <span class="no">N°04</span>
+      </div>
+      <h2>
+        主要なパートナー
+        <span class="en">— The partners who make us who we are.</span>
+      </h2>
+    </div>
+
+    <div class="partners">
+      <div class="partner">
+        <div class="pix"><span class="pn">01</span> Partner</div>
+        <h3>販売プラットフォーム</h3>
+        <p>Amazon(9カ国)</p>
+      </div>
+      <div class="partner">
+        <div class="pix"><span class="pn">02</span> Partner</div>
+        <h3>製造パートナー</h3>
+        <p>日本国内のものづくりパートナーの皆様</p>
+      </div>
+      <div class="partner">
+        <div class="pix"><span class="pn">03</span> Partner</div>
+        <h3>物流</h3>
+        <p>Amazon フルフィルメント<br>(<span class="nb">米国・英国・フランス・日本</span>の<span class="nb">4拠点</span>)</p>
+      </div>
+      <div class="partner">
+        <div class="pix"><span class="pn">04</span> Partner</div>
+        <h3>専門家パートナー</h3>
+        <p>税理士・金融機関・法務</p>
+      </div>
+    </div>
+
+    <div class="partners-foot">
+      <div class="fn-label">Footnote — N°04</div>
+      <p>製造パートナーの社名は、各社様との合意のもと、随時公開してまいります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="kicker-c">Contact us</div>
+      <h2>ご質問・お問い合わせ</h2>
+      <p>
+        会社情報・取引に関するご質問は、<span class="form-ref nb">お問い合わせフォーム</span>より承ります。<span class="nb">通常 2 営業日以内</span>にご返信いたします。
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="cta-coral" href="/contact">
+        <span class="left">
+          お問い合わせフォームへ
+          <span class="small">/contact — typical reply within 2 business days</span>
+        </span>
+        <span class="arr">───→</span>
+      </a>
+      <div class="cta-direct">
+        <div class="k">Direct</div>
+        <div class="v">info@asiahonpo.co.jp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">株式会社アジア本舗</div>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+        <div class="addr">
+          〒171-0031 東京都豊島区目白2-3-15<br>
+          ソフィア目白 1003号
+        </div>
+        <div class="reg">
+          EST. 2015 — TOKYO, JAPAN<br>
+          BRAND : SCANDINOVIA® / 9 MARKETS
+        </div>
+      </div>
+      <div class="foot-col">
+        <h6>Sitemap</h6>
+        <ul>
+          <li><a href="/">Home<span class="sub">ホーム</span></a></li>
+          <li><a href="/business">事業について<span class="sub">Our business</span></a></li>
+          <li><a href="/company">会社概要<span class="sub">Company profile</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>More</h6>
+        <ul>
+          <li><a href="/journal">越境ECで、10年やってきて。<span class="sub">10 years in cross-border EC</span></a></li>
+          <li><a href="/contact">お問い合わせ<span class="sub">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Markets</h6>
+        <ul>
+          <li><a>JP / US / CA / MX<span class="sub">Amazon channels</span></a></li>
+          <li><a>UK / DE / FR / IT / ES<span class="sub">Amazon channels</span></a></li>
+          <li><a><span class="nb">Amazon倉庫の拠点</span> — <span class="nb">米国 / 英国 / フランス / 日本</span><span class="sub">Fulfillment network</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2015–2026 ASIA HONPO CO., LTD. ALL RIGHTS RESERVED.</div>
+      <div class="legal">
+        <a href="/privacy">PRIVACY POLICY</a>
+        <a href="/terms">TERMS</a>
+        <a href="/tokutei">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

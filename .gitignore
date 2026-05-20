@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node / build artifacts (将来用)
+node_modules/
+dist/
+.cache/
+
+# Logs
+*.log
+
+# Local env
+.env
+.env.local
+
+# Backup
+*.bak
+*.orig

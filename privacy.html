@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>プライバシーポリシー — 株式会社アジア本舗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#185FA5;
+    --navy-deep:#0C447C;
+    --coral:#D85A30;
+    --ink:#1A1A18;
+    --body:#444441;
+    --muted:#888780;
+    --line:#E3E0D6;
+    --line-2:#D8D4C7;
+    --bg:#FFFFFF;
+    --bg-warm:#F1EFE8;
+    --bg-warmer:#E8E5DA;
+    --serif:'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:'Noto Sans JP', 'Yu Gothic', sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --num:'Cormorant Garamond', 'Noto Serif JP', serif;
+    --max:1240px;
+    --pad:48px;
+    --reading:720px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--sans);color:var(--body);background:var(--bg);
+    font-size:15px;line-height:1.9;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    word-break:keep-all;overflow-wrap:break-word;line-break:strict;
+    text-wrap:pretty;hanging-punctuation:allow-end;
+  }
+  .topbar, nav.primary a, .foot-bottom, .corner, .topbar .meta,
+  .essay-label, .crumbs, .updated, .contact-card .lbl,
+  .foot-col h6, .foot-brand .reg{
+    word-break:normal;line-break:auto;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .nb{white-space:nowrap}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{border-bottom:1px solid var(--line);background:var(--bg);font-size:12px;color:var(--muted)}
+  .topbar-inner{display:flex;justify-content:space-between;align-items:center;height:34px}
+  .topbar .lang{display:flex;gap:18px;letter-spacing:.08em}
+  .topbar .lang a.is-active{color:var(--ink)}
+  .topbar .meta{display:flex;gap:22px;letter-spacing:.04em}
+  .topbar .meta .dot{width:5px;height:5px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:8px;vertical-align:middle}
+
+  /* ---------- Header ---------- */
+  header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:baseline;gap:14px}
+  .brand .mark{
+    width:40px;height:40px;flex:none;background:var(--navy);color:#fff;
+    display:grid;place-items:center;
+    font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.02em;
+    position:relative;align-self:center;
+  }
+  .brand .mark::after{content:"";position:absolute;inset:auto -4px -4px auto;width:8px;height:8px;background:var(--coral)}
+  .brand .name{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:18px;letter-spacing:.04em;line-height:1.1}
+  .brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-top:3px;display:block}
+  nav.primary{display:flex;align-items:center;gap:38px}
+  nav.primary a{font-size:13.5px;color:var(--ink);letter-spacing:.04em;position:relative;padding:6px 0}
+  nav.primary a:hover{color:var(--navy)}
+  .nav-cta{
+    font-family:var(--sans);font-size:13px;letter-spacing:.06em;
+    border:1px solid var(--ink);padding:11px 22px;color:var(--ink);
+    display:inline-flex;align-items:center;gap:10px;transition:.2s;
+  }
+  .nav-cta:hover{background:var(--ink);color:#fff}
+
+  /* ---------- Hero ---------- */
+  .page-hero{padding:110px 0 96px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .page-hero .eyebrow{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:48px;
+  }
+  .page-hero .eyebrow::before{content:"";width:36px;height:1px;background:var(--coral)}
+  .page-hero h1{
+    font-family:var(--serif);font-weight:500;color:var(--navy-deep);
+    font-size:62px;line-height:1.35;letter-spacing:.04em;margin:0 0 28px;
+  }
+  .page-hero .sub{
+    font-family:var(--serif);font-style:italic;color:var(--muted);
+    font-size:22px;line-height:1.8;letter-spacing:.04em;
+    margin:0;max-width:720px;font-weight:400;
+  }
+  .page-hero .crumbs{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+    color:var(--muted);margin-top:64px;padding-top:24px;
+    border-top:1px solid var(--line);text-transform:uppercase;
+  }
+  .page-hero .crumbs .sep{opacity:.5}
+  .page-hero .crumbs a{color:var(--muted)}
+  .page-hero .crumbs .here{color:var(--ink)}
+
+  /* ---------- Privacy sections ---------- */
+  .privacy{padding:96px 0 24px;background:var(--bg)}
+  .privacy-section{
+    padding:48px 0 56px;
+    border-top:1px solid var(--line);
+  }
+  .privacy-section:first-of-type{border-top:none;padding-top:0}
+  .privacy-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--reading)) 1fr;
+    column-gap:64px;align-items:start;
+  }
+  .essay-label{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    border-top:1px solid var(--ink);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+    position:sticky;top:120px;
+  }
+  .essay-label .no{
+    font-family:var(--num);font-style:italic;
+    font-size:18px;color:var(--ink);letter-spacing:.04em;
+  }
+  .privacy-head h2{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:28px;line-height:1.5;letter-spacing:.04em;
+    margin:0 0 32px;
+  }
+  .privacy-body{max-width:var(--reading)}
+  .privacy-body p{
+    margin:0 0 18px;
+    font-size:16px;line-height:2.0;color:var(--body);
+    letter-spacing:.02em;
+  }
+  .privacy-body p:last-child{margin-bottom:0}
+  .privacy-body b, .privacy-body strong{
+    font-weight:500;color:var(--ink);font-family:var(--serif);
+  }
+  .privacy-body a{
+    color:var(--navy);border-bottom:1px solid var(--navy);padding-bottom:1px;
+  }
+
+  /* List variants */
+  .list-block{margin:20px 0 22px}
+  .list-block .lbl{
+    font-family:var(--mono);
+    font-size:10px;letter-spacing:.22em;color:var(--coral);
+    text-transform:uppercase;
+    margin-bottom:14px;display:block;
+  }
+  .list-bullet{
+    list-style:none;margin:0;padding:0;
+    display:grid;grid-template-columns:1fr 1fr;gap:8px 32px;
+    border-top:1px solid var(--line-2);
+    padding-top:18px;
+  }
+  .list-bullet li{
+    padding:8px 0 8px 22px;
+    position:relative;
+    font-family:var(--serif);
+    font-size:15.5px;color:var(--ink);letter-spacing:.04em;
+    line-height:1.7;
+  }
+  .list-bullet li::before{
+    content:"";
+    position:absolute;left:0;top:18px;
+    width:8px;height:1px;background:var(--coral);
+  }
+
+  .list-numbered{
+    list-style:none;margin:24px 0 22px;padding:0;
+    border-top:1px solid var(--line-2);
+  }
+  .list-numbered li{
+    display:grid;grid-template-columns:48px 1fr;gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line-2);
+    font-size:15.5px;line-height:1.85;color:var(--body);
+    letter-spacing:.02em;
+  }
+  .list-numbered li .n{
+    font-family:var(--num);font-style:italic;font-weight:500;
+    color:var(--coral);
+    font-size:20px;line-height:1.4;letter-spacing:.04em;
+  }
+
+  /* Contact card */
+  .contact-card{
+    background:var(--bg-warm);
+    border-left:3px solid var(--coral);
+    padding:32px 36px;
+    margin:18px 0 0;
+    max-width:var(--reading);
+  }
+  .contact-card .lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;
+    color:var(--coral);text-transform:uppercase;
+    margin-bottom:14px;display:block;
+  }
+  .contact-card .name{
+    font-family:var(--serif);font-weight:500;
+    color:var(--ink);font-size:17px;letter-spacing:.04em;
+    margin-bottom:6px;
+  }
+  .contact-card .addr{
+    font-size:14px;line-height:1.95;color:var(--body);
+    margin-bottom:14px;
+  }
+  .contact-card dl{
+    display:grid;grid-template-columns:88px 1fr;gap:8px 18px;
+    margin:0;align-items:baseline;
+  }
+  .contact-card dt{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    color:var(--muted);text-transform:uppercase;padding-top:3px;
+    word-break:normal;
+  }
+  .contact-card dd{
+    margin:0;
+    font-family:var(--serif);color:var(--ink);
+    font-size:14.5px;line-height:1.7;letter-spacing:.04em;
+  }
+  .contact-card .mail{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy);
+    border-bottom:1px solid var(--navy);padding-bottom:1px;
+  }
+
+  /* ---------- Updated stamp ---------- */
+  .updated-row{padding:60px 0 96px;background:var(--bg);border-top:1px solid var(--line)}
+  .updated{
+    display:flex;align-items:center;gap:16px;
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+  }
+  .updated::before{content:"";width:36px;height:1px;background:var(--line-2)}
+  .updated .stamp{
+    font-family:var(--serif);font-style:italic;
+    color:var(--muted);font-size:14px;letter-spacing:.04em;
+    text-transform:none;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--bg);border-top:1px solid var(--line);padding:80px 0 40px;color:var(--body)}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid var(--line)}
+  .foot-brand .name{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);margin-bottom:6px}
+  .foot-brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:24px;display:block}
+  .foot-brand .addr{font-size:13px;line-height:1.9;color:var(--body);margin-bottom:14px}
+  .foot-brand .reg{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);line-height:1.9}
+  .foot-col h6{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .foot-col ul{list-style:none;margin:0;padding:0}
+  .foot-col li{margin-bottom:14px;font-size:13.5px}
+  .foot-col li a{color:var(--ink);font-family:var(--serif)}
+  .foot-col li a:hover{color:var(--navy)}
+  .foot-col li .sub{display:block;font-size:11px;color:var(--muted);font-family:var(--sans);margin-top:2px;letter-spacing:.04em}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:11.5px;font-family:var(--mono);letter-spacing:.12em;color:var(--muted)}
+  .foot-bottom .legal{display:flex;gap:24px}
+  .foot-bottom .legal a:hover{color:var(--ink)}
+  .foot-bottom .legal a.is-active{
+    color:var(--coral);
+    border-bottom:1px solid var(--coral);padding-bottom:2px;
+  }
+
+  @media (max-width: 1100px){
+    .page-hero h1{font-size:40px}
+    .privacy-frame{grid-template-columns:1fr;gap:24px}
+    .essay-label{position:static}
+    .list-bullet{grid-template-columns:1fr;gap:0}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="lang">
+      <a class="is-active" href="#">JP</a>
+      <a href="#">EN</a>
+    </div>
+    <div class="meta">
+      <span><span class="dot"></span>Tokyo, Japan — 設立 2015</span>
+      <span>SCANDINOVIA / Amazon 9 Markets</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="mark">亞</span>
+      <span>
+        <span class="name">株式会社アジア本舗</span>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+      </span>
+    </a>
+    <nav class="primary">
+      <a href="/">Home</a>
+      <a href="/business">事業について</a>
+      <a href="/company">会社概要</a>
+      <a href="/journal">越境ECで、10年やってきて。</a>
+<a class="nav-cta" href="/contact">Contact <span class="arr">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Legal — Privacy policy</div>
+    <h1>プライバシーポリシー</h1>
+    <p class="sub">— お客様の個人情報の取り扱いについて。</p>
+    <div class="crumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="here">Legal — プライバシーポリシー</span>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy body -->
+<div class="privacy">
+
+  <!-- N°01 Policy -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Policy</span>
+        <span class="no">N°01</span>
+      </div>
+      <div class="privacy-head">
+        <h2>基本方針</h2>
+        <div class="privacy-body">
+          <p>
+            <span class="nb">株式会社アジア本舗</span>(以下、「当社」といいます)は、お客様の個人情報の保護を重要な責務と認識し、関連する法令およびその他の規範を遵守するとともに、本プライバシーポリシーに基づき、個人情報を適切に取り扱います。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°02 Data -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Data</span>
+        <span class="no">N°02</span>
+      </div>
+      <div class="privacy-head">
+        <h2>個人情報の定義と収集する情報</h2>
+        <div class="privacy-body">
+          <p>
+            「個人情報」とは、生存する個人に関する情報であり、氏名、生年月日、メールアドレス等により特定の個人を識別できるものをいいます。
+          </p>
+          <p>
+            当社が当サイト(<span class="nb">www.asiahonpo.co.jp</span>)を通じて収集する個人情報は、以下の場合に限られます。
+          </p>
+
+          <div class="list-block">
+            <span class="lbl">— Via contact form / お問い合わせフォームを通じて収集する情報</span>
+            <ul class="list-bullet">
+              <li>お名前</li>
+              <li>会社名・屋号</li>
+              <li>メールアドレス</li>
+              <li>電話番号(任意)</li>
+              <li>お問い合わせ内容</li>
+            </ul>
+          </div>
+
+          <p>
+            なお、当サイトでは商品の販売を行っておりません。商品ご購入時の個人情報の取り扱いは、各販売店舗(<span class="nb">Amazon</span>)のプライバシーポリシーに準じます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°03 Purpose -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Purpose</span>
+        <span class="no">N°03</span>
+      </div>
+      <div class="privacy-head">
+        <h2>利用目的</h2>
+        <div class="privacy-body">
+          <p>当社は、収集した個人情報を、以下の目的のためにのみ使用します。</p>
+          <ol class="list-numbered">
+            <li><span class="n">01</span><span>お問い合わせへの対応・回答</span></li>
+            <li><span class="n">02</span><span>お客様とのご連絡(必要な場合)</span></li>
+            <li><span class="n">03</span><span>製造パートナーシップ等、ご相談内容に応じた個別対応</span></li>
+            <li><span class="n">04</span><span>お問い合わせ履歴の管理(社内記録のため)</span></li>
+            <li><span class="n">05</span><span>当社サービス改善のための統計分析(個人を特定しない形での集計)</span></li>
+          </ol>
+          <p>上記以外の目的で個人情報を使用する場合は、事前にお客様の同意を得るものとします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°04 Disclosure -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Disclosure</span>
+        <span class="no">N°04</span>
+      </div>
+      <div class="privacy-head">
+        <h2>第三者提供</h2>
+        <div class="privacy-body">
+          <p>当社は、お客様の個人情報を、お客様の同意を得ることなく、第三者に提供することはありません。ただし、以下の場合は除きます。</p>
+          <ol class="list-numbered">
+            <li><span class="n">01</span><span>法令に基づく場合</span></li>
+            <li><span class="n">02</span><span>人の生命、身体または財産の保護のために必要な場合</span></li>
+            <li><span class="n">03</span><span>公衆衛生の向上または児童の健全な育成の推進のために特に必要な場合</span></li>
+            <li><span class="n">04</span><span>国の機関若しくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°05 Rights -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Rights</span>
+        <span class="no">N°05</span>
+      </div>
+      <div class="privacy-head">
+        <h2>開示・訂正・利用停止のご請求</h2>
+        <div class="privacy-body">
+          <p>
+            お客様は、当社が保有するご自身の個人情報について、開示、訂正、追加、削除、利用停止または第三者提供の停止をご請求いただけます。ご請求の際は、本ページ下部のお問い合わせ窓口までご連絡ください。
+          </p>
+          <p>
+            ご本人確認のため、お問い合わせ時にお客様のお名前、メールアドレス、ご請求内容をお知らせください。当社にて確認後、合理的な期間内に対応いたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°06 Security -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Security</span>
+        <span class="no">N°06</span>
+      </div>
+      <div class="privacy-head">
+        <h2>安全管理措置</h2>
+        <div class="privacy-body">
+          <p>当社は、お客様の個人情報の漏洩、滅失、毀損の防止その他の個人情報の安全管理のため、以下の措置を講じています。</p>
+          <ol class="list-numbered">
+            <li><span class="n">01</span><span>個人情報を取り扱う者を必要最小限に限定</span></li>
+            <li><span class="n">02</span><span>個人情報を保管する記録媒体・システムへのアクセス制限</span></li>
+            <li><span class="n">03</span><span>個人情報を含むデータの暗号化・パスワード保護</span></li>
+            <li><span class="n">04</span><span>業務委託先選定時の個人情報取り扱いに関する確認</span></li>
+            <li><span class="n">05</span><span>個人情報の取り扱いに関する社内教育の実施</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°07 Officer -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Officer</span>
+        <span class="no">N°07</span>
+      </div>
+      <div class="privacy-head">
+        <h2>個人情報保護管理者</h2>
+        <div class="privacy-body">
+          <p>
+            当社の個人情報保護管理者は、<b>代表取締役 <span class="nb">大野 弘智</span></b> です。個人情報の取り扱いに関する責任は、最終的に代表取締役が負うものとします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°08 Contact -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Contact</span>
+        <span class="no">N°08</span>
+      </div>
+      <div class="privacy-head">
+        <h2>お問い合わせ窓口</h2>
+        <div class="privacy-body">
+          <p>個人情報の取り扱いに関するご質問・ご請求・ご相談は、以下の窓口までお願いいたします。</p>
+
+          <div class="contact-card">
+            <span class="lbl">— Privacy contact window</span>
+            <div class="name">株式会社アジア本舗</div>
+            <div class="addr">
+              <span class="nb">〒171-0031</span> <span class="nb">東京都豊島区目白2-3-15</span><br>
+              <span class="nb">ソフィア目白 1003号</span>
+            </div>
+            <dl>
+              <dt>Email</dt>
+              <dd><a class="mail" href="mailto:info@asiahonpo.co.jp"><span class="nb">info@asiahonpo.co.jp</span></a></dd>
+              <dt>Hours</dt>
+              <dd>平日 10:00 〜 18:00<br>(土日祝日を除く)</dd>
+              <dt>Reply</dt>
+              <dd>通常<span class="nb">2営業日以内</span>にご返信いたします</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N°09 Revision -->
+  <section class="privacy-section">
+    <div class="wrap privacy-frame">
+      <div class="essay-label">
+        <span>Revision</span>
+        <span class="no">N°09</span>
+      </div>
+      <div class="privacy-head">
+        <h2>改定について</h2>
+        <div class="privacy-body">
+          <p>
+            当社は、本プライバシーポリシーを必要に応じて改定することがあります。改定後の本ポリシーは、当社が別途定める効力発生日から、適用されるものとします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Updated stamp -->
+<section class="updated-row">
+  <div class="wrap privacy-frame">
+    <div class="essay-label" style="position:static;border:none;padding:0">
+      <span>Last updated</span>
+    </div>
+    <div>
+      <div class="updated">
+        Last updated
+        <span class="stamp">2026年5月20日</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">株式会社アジア本舗</div>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+        <div class="addr">
+          〒171-0031 東京都豊島区目白2-3-15<br>
+          ソフィア目白 1003号
+        </div>
+        <div class="reg">
+          EST. 2015 — TOKYO, JAPAN<br>
+          BRAND : SCANDINOVIA® / 9 MARKETS
+        </div>
+      </div>
+      <div class="foot-col">
+        <h6>Sitemap</h6>
+        <ul>
+          <li><a href="/">Home<span class="sub">ホーム</span></a></li>
+          <li><a href="/business">事業について<span class="sub">Our business</span></a></li>
+          <li><a href="/company">会社概要<span class="sub">Company profile</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>More</h6>
+        <ul>
+          <li><a href="/journal">越境ECで、10年やってきて。<span class="sub">10 years in cross-border EC</span></a></li>
+          <li><a href="/contact">お問い合わせ<span class="sub">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Markets</h6>
+        <ul>
+          <li><a>JP / US / CA / MX<span class="sub">Amazon channels</span></a></li>
+          <li><a>UK / DE / FR / IT / ES<span class="sub">Amazon channels</span></a></li>
+          <li><a><span class="nb">Amazon倉庫の拠点</span> — <span class="nb">米国 / 英国 / フランス / 日本</span><span class="sub">Fulfillment network</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2015–2026 ASIA HONPO CO., LTD. ALL RIGHTS RESERVED.</div>
+      <div class="legal">
+        <a class="is-active" href="/privacy">PRIVACY POLICY</a>
+        <a href="/terms">TERMS</a>
+        <a href="/tokutei">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
