@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>製造パートナーの皆様からよくいただくご質問 — 株式会社アジア本舗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#185FA5;
+    --navy-deep:#0C447C;
+    --coral:#D85A30;
+    --ink:#1A1A18;
+    --body:#444441;
+    --muted:#888780;
+    --line:#E3E0D6;
+    --line-2:#D8D4C7;
+    --bg:#FFFFFF;
+    --bg-warm:#F1EFE8;
+    --bg-warmer:#E8E5DA;
+    --serif:'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:'Noto Sans JP', 'Yu Gothic', sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --num:'Cormorant Garamond', 'Noto Serif JP', serif;
+    --max:1240px;
+    --pad:48px;
+    --reading:720px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--sans);
+    color:var(--body);
+    background:var(--bg);
+    font-size:15px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    line-break:strict;
+    text-wrap:pretty;
+    hanging-punctuation:allow-end;
+  }
+  .topbar, nav.primary a, .foot-bottom,
+  .corner, .tag, .footnote,
+  .foot-col h6, .foot-brand .reg, .cta-direct .k,
+  .cta-coral .small, .topbar .meta,
+  .ix, .kicker, .crumbs, .num-tag, .epigraph-label, .essay-label{
+    word-break:normal;
+    line-break:auto;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .nb{white-space:nowrap}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{border-bottom:1px solid var(--line);background:var(--bg);font-size:12px;color:var(--muted)}
+  .topbar-inner{display:flex;justify-content:space-between;align-items:center;height:34px}
+  .topbar .lang{display:flex;gap:18px;letter-spacing:.08em}
+  .topbar .lang a.is-active{color:var(--ink)}
+  .topbar .meta{display:flex;gap:22px;letter-spacing:.04em}
+  .topbar .meta .dot{width:5px;height:5px;border-radius:50%;background:var(--coral);display:inline-block;margin-right:8px;vertical-align:middle}
+
+  /* ---------- Header ---------- */
+  header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .brand{display:flex;align-items:baseline;gap:14px}
+  .brand .mark{
+    width:40px;height:40px;flex:none;background:var(--navy);color:#fff;
+    display:grid;place-items:center;
+    font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.02em;
+    position:relative;align-self:center;
+  }
+  .brand .mark::after{content:"";position:absolute;inset:auto -4px -4px auto;width:8px;height:8px;background:var(--coral)}
+  .brand .name{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:18px;letter-spacing:.04em;line-height:1.1}
+  .brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-top:3px;display:block}
+  nav.primary{display:flex;align-items:center;gap:38px}
+  nav.primary a{font-size:13.5px;color:var(--ink);letter-spacing:.04em;position:relative;padding:6px 0}
+  nav.primary a.is-active{color:var(--coral)}
+  nav.primary a.is-active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--coral)}
+  nav.primary a:hover{color:var(--navy)}
+  .nav-cta{
+    font-family:var(--sans);font-size:13px;letter-spacing:.06em;
+    border:1px solid var(--ink);padding:11px 22px;color:var(--ink);
+    display:inline-flex;align-items:center;gap:10px;transition:.2s;
+  }
+  .nav-cta:hover{background:var(--ink);color:#fff}
+
+  /* ---------- Hero ---------- */
+  .page-hero{padding:140px 0 120px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .page-hero .eyebrow{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted);
+    margin-bottom:56px;
+  }
+  .page-hero .eyebrow::before{content:"";width:36px;height:1px;background:var(--coral)}
+  .page-hero h1{
+    font-family:var(--serif);font-weight:500;color:var(--navy-deep);
+    font-size:84px;line-height:1.3;letter-spacing:.04em;
+    margin:0 0 36px;max-width:1040px;
+  }
+  .page-hero .sub{
+    font-family:var(--serif);font-style:italic;color:var(--muted);
+    font-size:24px;line-height:1.8;letter-spacing:.04em;
+    margin:0;max-width:760px;font-weight:400;
+  }
+  .page-hero .crumbs{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+    color:var(--muted);margin-top:80px;padding-top:24px;
+    border-top:1px solid var(--line);text-transform:uppercase;
+  }
+  .page-hero .crumbs .sep{opacity:.5}
+  .page-hero .crumbs a{color:var(--muted)}
+  .page-hero .crumbs .here{color:var(--ink)}
+
+  /* ---------- Essay section common ---------- */
+  .essay-section{padding:140px 0;border-bottom:1px solid var(--line)}
+  .essay-section.alt{background:var(--bg-warm);border-bottom:1px solid var(--line-2)}
+  .essay-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--reading)) 1fr;
+    column-gap:64px;
+    align-items:start;
+  }
+  .essay-label{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.22em;color:var(--muted);
+    text-transform:uppercase;
+    border-top:1px solid var(--ink);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+    position:sticky;top:120px;
+  }
+  .essay-label .no{
+    font-family:var(--num);font-style:italic;
+    font-size:18px;color:var(--ink);letter-spacing:.04em;
+  }
+  .essay-head h2{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:44px;line-height:1.45;letter-spacing:.04em;
+    margin:0 0 14px;
+  }
+  .essay-head .en{
+    display:block;
+    font-family:var(--num);font-style:italic;
+    color:var(--muted);font-size:16px;letter-spacing:.1em;
+    margin-bottom:64px;
+  }
+
+  /* essay body */
+  .essay-body p{
+    margin:0 0 28px;
+    font-size:17.5px;line-height:2.1;color:var(--body);
+    letter-spacing:.02em;
+  }
+  .essay-body p:last-child{margin-bottom:0}
+  .essay-body b, .essay-body strong{
+    font-weight:500;color:var(--ink);font-family:var(--serif);
+    font-style:normal;
+  }
+  .essay-body .em-coral{
+    color:var(--coral);font-weight:500;font-family:var(--serif);
+    border-bottom:1px solid rgba(216,90,48,.4);padding-bottom:1px;
+  }
+  .essay-body .em-navy{
+    color:var(--navy-deep);font-weight:500;font-family:var(--serif);
+  }
+
+  /* origin paragraph readability */
+  .essay-section .essay-body .origin-paragraph{
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    line-break:strict;
+    hanging-punctuation:allow-end;
+    max-width:660px;
+  }
+
+  /* ---------- N°02 — three learnings ---------- */
+  .lead-italic{
+    font-family:var(--serif);font-style:italic;
+    color:var(--muted);
+    font-size:23px;line-height:2;
+    letter-spacing:.04em;
+    margin:0 0 96px;
+    max-width:760px;
+    font-weight:400;
+  }
+  .lead-italic .accent{color:var(--muted);font-style:italic;font-weight:400}
+
+  .learning{
+    margin-bottom:120px;
+    max-width:var(--reading);
+  }
+  .learning:last-of-type{margin-bottom:0}
+  .learning .ord{
+    font-family:var(--num);
+    font-weight:500;font-style:italic;
+    color:var(--coral);
+    font-size:48px;line-height:1;letter-spacing:.02em;
+    margin-bottom:24px;
+    display:block;
+  }
+  .learning h3{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:30px;line-height:1.6;letter-spacing:.04em;
+    margin:0 0 36px;
+  }
+  .learning p{
+    margin:0 0 24px;
+    font-size:17px;line-height:2.1;color:var(--body);
+    letter-spacing:.02em;
+  }
+  .learning p:last-child{margin-bottom:0}
+
+  /* Customer voice cards inside block ② */
+  .voices{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;
+    margin:36px 0 36px;
+  }
+  .voice{
+    background:#fff;
+    border:1px solid var(--line-2);
+    border-left:2px solid var(--coral);
+    padding:32px 24px;
+    font-family:var(--serif);
+    font-size:15px;line-height:1.8;
+    color:var(--ink);
+    letter-spacing:.04em;
+    position:relative;
+    text-align:left;
+    word-break:keep-all;
+    line-break:strict;
+    hanging-punctuation:allow-end;
+    overflow-wrap:break-word;
+  }
+  .voice p{margin:0;line-height:1.8}
+  .voice::before{
+    content:"\201C";
+    font-family:var(--num);font-style:italic;
+    color:var(--coral);
+    font-size:32px;line-height:1;
+    display:block;margin-bottom:4px;
+  }
+  .alt .voice{background:#fff}
+
+  /* Quote block inside block ③ */
+  .essay-quote{
+    margin:8px 0 0;
+    padding:24px 0 24px 28px;
+    border-left:2px solid var(--navy-deep);
+    font-family:var(--serif);font-style:italic;
+    font-size:18px;line-height:2;color:var(--ink);
+    letter-spacing:.04em;
+    max-width:var(--reading);
+  }
+
+  /* ---------- Epigraph block ---------- */
+  .epigraph{
+    background:var(--bg-warm);
+    padding:200px 0;
+    text-align:center;
+    position:relative;
+    border-top:1px solid var(--line-2);
+    border-bottom:1px solid var(--line-2);
+  }
+  .epigraph-label{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.32em;
+    color:var(--muted);text-transform:uppercase;
+    margin-bottom:64px;
+    display:inline-flex;align-items:center;gap:18px;
+  }
+  .epigraph-label::before, .epigraph-label::after{
+    content:"";width:48px;height:1px;background:var(--muted);
+  }
+  .epigraph-mark{
+    font-family:var(--num);font-style:italic;
+    color:var(--coral);
+    font-size:120px;line-height:1;
+    margin-bottom:24px;
+    display:block;font-weight:400;
+  }
+  .epigraph blockquote{
+    margin:0 auto;
+    max-width:980px;
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:52px;line-height:1.8;letter-spacing:.06em;
+  }
+  .epigraph blockquote .line{display:block}
+  .epigraph .sig{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.32em;color:var(--muted);
+    text-transform:uppercase;
+    margin-top:80px;
+    display:inline-flex;align-items:center;gap:18px;
+  }
+  .epigraph .sig::before, .epigraph .sig::after{
+    content:"";width:32px;height:1px;background:var(--muted);
+  }
+
+  /* ---------- N°03 — next decade essay ---------- */
+  .essay-section.next .essay-body p{
+    font-size:19px;line-height:2.2;
+    color:var(--ink);
+  }
+  .essay-section.next .essay-body b,
+  .essay-section.next .essay-body strong{
+    color:var(--coral);font-weight:500;font-family:var(--serif);
+  }
+  .essay-section.next .declaration{
+    font-family:var(--serif);font-weight:500;
+    color:var(--navy-deep);
+    font-size:32px;line-height:1.8;letter-spacing:.04em;
+    margin:0 0 64px;
+    max-width:760px;
+  }
+  .essay-section.next .close-line{
+    margin:80px auto 0;
+    text-align:center;
+    font-family:var(--serif);
+    font-size:21px;line-height:1.8;color:var(--ink);
+    letter-spacing:.06em;
+    display:flex;align-items:center;justify-content:center;gap:18px;
+  }
+  .essay-section.next .close-line::before,
+  .essay-section.next .close-line::after{
+    content:"";width:36px;height:1px;background:var(--line-2);
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-section{background:var(--navy-deep);color:#fff;padding:110px 0;position:relative;overflow:hidden}
+  .cta-section::before{
+    content:"";position:absolute;top:0;right:-100px;width:340px;height:100%;
+    background-image:repeating-linear-gradient(135deg,
+      rgba(255,255,255,.04) 0,
+      rgba(255,255,255,.04) 1px,
+      transparent 1px,transparent 12px);
+  }
+  .cta-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;position:relative}
+  .cta-section .kicker-c{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    color:rgba(255,255,255,.55);margin-bottom:28px;
+    text-transform:uppercase;display:flex;align-items:center;gap:14px;
+  }
+  .cta-section .kicker-c::before{content:"";width:36px;height:1px;background:var(--coral)}
+  .cta-section h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:40px;line-height:1.45;letter-spacing:.04em;
+    margin:0 0 22px;color:#fff;
+  }
+  .cta-section p{
+    max-width:480px;color:rgba(255,255,255,.78);
+    font-size:14.5px;line-height:2;margin:0;
+  }
+  .cta-section .form-ref{
+    color:#9fb7d6;font-weight:600;font-family:var(--serif);
+    border-bottom:1px solid rgba(159,183,214,.4);padding-bottom:1px;
+  }
+  .cta-actions{display:flex;flex-direction:column;gap:18px;border-left:1px solid rgba(255,255,255,.15);padding-left:60px}
+  .cta-coral{
+    display:inline-flex;align-items:center;justify-content:space-between;gap:30px;
+    font-family:var(--serif);font-size:18px;color:#fff;
+    background:var(--coral);padding:24px 30px;
+    letter-spacing:.06em;border:1px solid var(--coral);transition:.2s;
+  }
+  .cta-coral:hover{background:transparent}
+  .cta-coral .small{
+    font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+    color:rgba(255,255,255,.7);text-transform:uppercase;margin-top:6px;
+  }
+  .cta-coral .left{display:flex;flex-direction:column}
+  .cta-coral .arr{font-family:var(--mono);font-size:14px}
+  .cta-direct{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:18px 4px 0;font-size:13px;color:rgba(255,255,255,.7)}
+  .cta-direct .k{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.55);text-transform:uppercase;padding-top:3px}
+  .cta-direct .v{font-family:var(--serif);color:#fff;line-height:1.6}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--bg);border-top:1px solid var(--line);padding:80px 0 40px;color:var(--body)}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid var(--line)}
+  .foot-brand .name{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);margin-bottom:6px}
+  .foot-brand .en{font-family:var(--num);font-style:italic;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:24px;display:block}
+  .foot-brand .addr{font-size:13px;line-height:1.9;color:var(--body);margin-bottom:14px}
+  .foot-brand .reg{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);line-height:1.9}
+  .foot-col h6{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .foot-col ul{list-style:none;margin:0;padding:0}
+  .foot-col li{margin-bottom:14px;font-size:13.5px}
+  .foot-col li a{color:var(--ink);font-family:var(--serif)}
+  .foot-col li a:hover{color:var(--navy)}
+  .foot-col li .sub{display:block;font-size:11px;color:var(--muted);font-family:var(--sans);margin-top:2px;letter-spacing:.04em}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:11.5px;font-family:var(--mono);letter-spacing:.12em;color:var(--muted)}
+  .foot-bottom .legal{display:flex;gap:24px}
+  .foot-bottom .legal a:hover{color:var(--ink)}
+
+  @media (max-width: 1100px){
+    .page-hero h1{font-size:54px}
+    .essay-frame{grid-template-columns:1fr;gap:24px}
+    .essay-label{position:static}
+    .epigraph blockquote{font-size:36px}
+    .epigraph-mark{font-size:80px}
+    .voices{grid-template-columns:1fr}
+    .essay-section.next .declaration{font-size:24px}
+    .cta-grid{grid-template-columns:1fr;gap:36px}
+    .cta-actions{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,.15);padding-top:32px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+
+  /* ============================================================
+     FAQ-specific styles v4 (factory-partner-faq.html only)
+     - 3-column grid(journal.html 完全準拠)
+     ============================================================ */
+
+  /* Lead - 左ラベル空 + 720px content + 余白 */
+  .faq-lead{padding:100px 0;border-bottom:1px solid var(--line);background:var(--bg)}
+  .faq-lead-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--reading)) 1fr;
+    column-gap:64px;
+    align-items:start;
+  }
+  .faq-lead-text{
+    font-family:var(--serif);font-size:17.5px;line-height:2.1;
+    color:var(--body);letter-spacing:.02em;margin:0;
+  }
+  .faq-lead-text b{font-weight:500;color:var(--ink)}
+
+  /* TOC */
+  .faq-toc{padding:100px 0;border-bottom:1px solid var(--line);background:var(--bg-warm)}
+  .faq-toc-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--reading)) 1fr;
+    column-gap:64px;
+    align-items:start;
+  }
+  .faq-toc-label{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    color:var(--muted);text-transform:uppercase;
+    border-top:1px solid var(--ink);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq-toc-label .no{
+    font-family:var(--num);font-style:italic;
+    font-size:18px;color:var(--ink);letter-spacing:.04em;
+  }
+  .faq-toc-head h2{
+    font-family:var(--serif);font-weight:500;color:var(--navy-deep);
+    font-size:32px;line-height:1.5;letter-spacing:.04em;margin:0 0 36px;
+  }
+  .faq-toc-list{list-style:none;padding:0;margin:0;counter-reset:faq}
+  .faq-toc-list li{
+    font-size:15px;line-height:1.85;margin-bottom:12px;
+    padding-left:44px;position:relative;counter-increment:faq;
+  }
+  .faq-toc-list li::before{
+    content:"Q" counter(faq) ".";
+    position:absolute;left:0;top:0;
+    font-family:var(--num);font-style:italic;
+    color:var(--coral);font-size:15px;font-weight:500;
+  }
+  .faq-toc-list li a{
+    color:var(--ink);
+    border-bottom:1px solid transparent;
+    transition:border-color .15s;
+  }
+  .faq-toc-list li a:hover{border-bottom-color:var(--coral)}
+
+  /* Q&A items */
+  .faq-q{
+    padding:80px 0;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:100px;
+    background:var(--bg);
+  }
+  .faq-q.alt{background:var(--bg-warm);border-bottom:1px solid var(--line-2)}
+  .faq-q-frame{
+    display:grid;
+    grid-template-columns:240px minmax(0, var(--reading)) 1fr;
+    column-gap:64px;
+    align-items:start;
+  }
+  .faq-q-label{
+    font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+    color:var(--muted);text-transform:uppercase;
+    border-top:1px solid var(--ink);padding-top:14px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq-q-label .no{
+    font-family:var(--num);font-style:italic;
+    font-size:18px;color:var(--ink);letter-spacing:.04em;
+  }
+  .faq-q-title{
+    font-family:var(--serif);font-weight:500;color:var(--navy-deep);
+    font-size:24px;line-height:1.6;letter-spacing:.02em;margin:0 0 28px;
+  }
+  .faq-q-body p{
+    font-size:16px;line-height:2.05;color:var(--body);
+    margin:0 0 20px;letter-spacing:.02em;
+  }
+  .faq-q-body p:last-child{margin-bottom:0}
+  .faq-q-body b, .faq-q-body strong{
+    font-weight:500;color:var(--ink);font-family:var(--serif);
+  }
+  .faq-q-body ol, .faq-q-body ul{
+    font-size:16px;line-height:2.0;color:var(--body);
+    margin:0 0 20px;padding-left:24px;
+  }
+  .faq-q-body li{margin-bottom:8px;letter-spacing:.02em}
+  .faq-q-toplink{text-align:right;margin-top:32px}
+  .faq-q-toplink a{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    color:var(--muted);text-transform:uppercase;
+    border-bottom:1px solid transparent;transition:border-color .15s;
+  }
+  .faq-q-toplink a:hover{border-bottom-color:var(--muted)}
+
+  /* Mobile: grid を 1-column に collapse */
+  @media (max-width: 900px){
+    .faq-lead-frame, .faq-toc-frame, .faq-q-frame{
+      grid-template-columns: 1fr;
+      column-gap:0;
+    }
+    .faq-toc-label, .faq-q-label{margin-bottom:24px}
+    .faq-lead, .faq-toc{padding:60px 0}
+    .faq-q{padding:48px 0}
+    .faq-toc-head h2{font-size:24px;margin:0 0 28px}
+    .faq-q-title{font-size:20px;margin:0 0 22px}
+    .faq-q-body p, .faq-q-body ol, .faq-q-body ul{font-size:15px;line-height:1.95}
+  }
+
+  /* Soft-link section in business/company/contact(v3 と同じ、inline style 使用) */
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="meta">
+      <span><span class="dot"></span>Tokyo, Japan — 設立 2015</span>
+      <span>SCANDINOVIA / Amazon 9 Markets</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <span class="mark">亞</span>
+      <span>
+        <span class="name">株式会社アジア本舗</span>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+      </span>
+    </a>
+    <nav class="primary">
+      <a href="/">Home</a>
+      <a href="/business">事業について</a>
+      <a href="/company">会社概要</a>
+      <a href="/journal">越境ECで、10年やってきて。</a>
+      <a class="nav-cta" href="/contact">Contact <span class="arr">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Manufacturing Partner FAQ / 製造パートナー候補の皆様へ</div>
+    <h1>ものづくりの<br>パートナーへ。</h1>
+    <p class="sub">— 関係づくりの基本姿勢について、20 のご質問。</p>
+    <div class="crumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="here">製造パートナー FAQ</span>
+    </div>
+  </div>
+</section>
+
+<!-- Lead -->
+<section class="faq-lead">
+  <div class="wrap faq-lead-frame">
+    <div></div>
+    <div class="faq-lead-head">
+      <p class="faq-lead-text">当社は、Amazon 9 カ国で展開する自社ブランド「SCANDINOVIA」(樹脂日用品)の製造パートナーを募集しております。本ページでは、製造パートナー候補の皆様からよくいただくご質問にお答えいたします。なお、いずれの質問もご相談時に直接お答えすることも可能です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOC (Index) -->
+<section class="faq-toc" id="toc">
+  <div class="wrap faq-toc-frame">
+    <div class="faq-toc-label">
+      <span>Index</span>
+      <span class="no">N°00</span>
+    </div>
+    <div class="faq-toc-head">
+      <h2>20 のご質問</h2>
+      <ol class="faq-toc-list">
+        <li><a href="#q1">既存取引のあるメーカーですが、それでもパートナーになれますか?</a></li>
+        <li><a href="#q2">どのような工場を想定されていますか?</a></li>
+        <li><a href="#q3">工場の所在地はどこの範囲を想定されていますか?</a></li>
+        <li><a href="#q4">年間の発注規模はどの程度ですか?</a></li>
+        <li><a href="#q5">発注は継続的に行われますか?</a></li>
+        <li><a href="#q6">為替変動による影響はどうなりますか?</a></li>
+        <li><a href="#q7">商品の品質基準はどのレベルですか?</a></li>
+        <li><a href="#q8">金型の費用負担はどなたが負担されますか?</a></li>
+        <li><a href="#q9">既存商品の追加発注ですか、新商品の開発からですか?</a></li>
+        <li><a href="#q10">支払条件はどのようになりますか?</a></li>
+        <li><a href="#q11">NDA は最初の段階で締結されますか?</a></li>
+        <li><a href="#q12">契約はどのような形になりますか?</a></li>
+        <li><a href="#q13">お見積りまでの流れを教えてください。</a></li>
+        <li><a href="#q14">代表の大野氏に直接相談することは可能ですか?</a></li>
+        <li><a href="#q15">一旦取引を見送った場合、フォローはありますか?</a></li>
+        <li><a href="#q16">アジア本舗の業績はどのような状況ですか?</a></li>
+        <li><a href="#q17">過去にお取引のあったパートナー企業の事例はありますか?</a></li>
+        <li><a href="#q18">SCANDINOVIA のレビューが多いのはなぜですか?</a></li>
+        <li><a href="#q19">プラスチック規制への対応はどうされていますか?</a></li>
+        <li><a href="#q20">補助金活用のサポートはありますか?</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 1 -->
+<section class="faq-q" id="q1">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°01</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q1. 既存取引のあるメーカーですが、それでもパートナーになれますか?</h2>
+      <div class="faq-q-body">
+        <p>もちろん歓迎いたします。</p>
+        <p>当社は SCANDINOVIA 専属の関係を求めるモデルではございません。現在ご一緒している製造パートナー様も、それぞれ他のお取引と並行されています。SCANDINOVIA の発注は、貴社の既存事業を制約するものではなく、長期的な需要の一つとして位置付けていただければ幸いです。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 2 -->
+<section class="faq-q alt" id="q2">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°02</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q2. どのような工場を想定されていますか?</h2>
+      <div class="faq-q-body">
+        <p>PET / AS 樹脂を中心とした樹脂日用品の成形を手がけられている工場様を想定しております。具体的には、社員 約 10〜50 名規模、樹脂用射出成形機を主力設備としてお持ちで、「壊れにくく長く使える」というものづくりの考え方を共有いただける工場様が好ましいパートナーです。</p>
+        <p>業界経験の長さや、設備の世代は問いません。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 3 -->
+<section class="faq-q" id="q3">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°03</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q3. 工場の所在地はどこの範囲を想定されていますか?</h2>
+      <div class="faq-q-body">
+        <p>当社拠点から車で片道 2 時間半程度の範囲、関東 1 都 6 県を中心としながら、ご相談に応じて柔軟に対応いたします。密にコミュニケーションを取れる距離感を重視しており、現在ご一緒している製造パートナー様もこの範囲内です。</p>
+        <p><b>海外向け発注の場合</b>、貴社のご対応範囲は「<b>40 フィートコンテナへのバンニングまで</b>」で完結いたします。それ以降の海上輸送・通関・海外配送・現地法規対応はすべて当社が一元的に行います。</p>
+        <p><b>日本国内向け発注</b>については、別途 outer-box 単位でのご対応をお願いしております。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 4 -->
+<section class="faq-q alt" id="q4">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°04</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q4. 年間の発注規模はどの程度ですか?</h2>
+      <div class="faq-q-body">
+        <p>年間 <b>合計 7〜9 本の 40 フィートコンテナ規模</b> を想定しております。</p>
+        <p><b>内訳</b>:</p>
+        <ul><li>海外 9 カ国向け: 6〜8 本(<b>1〜8 月に集約</b>)</li><li>日本国内向け: 1 本相当(通年、outer-box 単位)</li></ul>
+        <p>海外向けは物流繁忙期 10〜12 月(米欧ホリデー商戦・春節前)を避け、日本向けが下半期の安定稼働を支える構造としております。<b>四半期ごとの発注計画</b> を貴社と共有させていただきます。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 5 -->
+<section class="faq-q" id="q5">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°05</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q5. 発注は継続的に行われますか?</h2>
+      <div class="faq-q-body">
+        <p>はい。<b>長期にわたって同じ商品を継続生産する</b> ことを根本姿勢としております。</p>
+        <p>過去 10 年で <b>15,000 件超のお客様のレビュー</b> を蓄積し、9 カ国 Amazon 倉庫に在庫を持って販売しております。主力商品は <b>7 SKU に絞り込み</b>、それぞれに <b>専用金型を当社が所有</b> しております。</p>
+        <p>「次々と新しい商品に切り替える」のではなく、「<b>選ばれた商品を磨き続ける</b>」考え方です。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 6 -->
+<section class="faq-q alt" id="q6">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°06</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q6. 為替変動による影響はどうなりますか?</h2>
+      <div class="faq-q-body">
+        <p><b>貴社へのご発注価格は、円建ての安定価格 で確定</b> いたします。</p>
+        <p>為替変動リスクは当社がすべて吸収いたします。海外マーケットでの売上が為替で増減することによる影響を、貴社のものづくりにご負担いただくことはございません。</p>
+        <p>中小製造業の皆様が、為替の影響を意識せずに <b>本来のものづくりに集中できる環境を提供する</b> ことは、当社の責務だと考えております。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 7 -->
+<section class="faq-q" id="q7">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°07</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q7. 商品の品質基準はどのレベルですか?</h2>
+      <div class="faq-q-body">
+        <p>SCANDINOVIA は以下の 4 つの基準で定義されております:</p>
+        <ol><li>PET または AS 樹脂の使用</li><li>1000 回の落下試験に耐える耐久性</li><li>6 色の透明カラー展開</li><li>Made in Japan</li></ol>
+        <p>試作段階で詳細な技術仕様を共有し、貴社の設備で実現可能な範囲を一緒に確認させていただきます。量産後に品質課題が発生した場合も、<b>一方的にご負担いただくのではなく、共に解決策を見出す姿勢</b> で取り組んでまいります。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 8 -->
+<section class="faq-q alt" id="q8">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°08</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q8. 金型の費用負担はどなたが負担されますか?</h2>
+      <div class="faq-q-body">
+        <p>既存の SCANDINOVIA 商品(7 SKU)については、それぞれの <b>専用金型を当社が所有</b> しております。これらの金型をお渡しした上で、貴社にて生産いただく形態が基本となります。</p>
+        <p>新商品開発については、商品の特性・生産規模・ご関係性に応じて、金型費用の負担方法を個別にご相談させていただきます。<b>一方的に貴社のご負担とすることはございません。</b></p>
+        <p>既存パートナー様との実例も、ご相談時にお伝えいたします。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 9 -->
+<section class="faq-q" id="q9">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°09</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q9. 既存商品の追加発注ですか、新商品の開発からですか?</h2>
+      <div class="faq-q-body">
+        <p>両方ともご相談可能です。</p>
+        <p>既存商品(7 SKU)の追加生産は、安定的な継続発注の基盤として重要視しております。同時に、新商品開発も活発に進めており、お客様の声(累計 15,000 件超)を起点にした企画を継続的に立案しております。</p>
+        <p>既存商品の追加生産から関係を始め、信頼を積み重ねた先で新商品開発も共にご一緒できる — そんな「長くご一緒できる関係」を、貴社と育てていけたら幸いです。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 10 -->
+<section class="faq-q alt" id="q10">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°10</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q10. 支払条件はどのようになりますか?</h2>
+      <div class="faq-q-body">
+        <p><b>月末締めの翌月払い</b> を標準としております。ご要望があれば、前払いの一部対応もご相談可能です。</p>
+        <p>当社は金融機関との取引を 10 年以上継続しており、<b>お支払いの確実性については金融機関の信用調査でもご確認いただけます</b>。また、四半期ごとの発注計画(Q4 参照)に基づき、お支払いも予測可能なスケジュールで進めさせていただきます。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 11 -->
+<section class="faq-q" id="q11">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°11</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q11. NDA は最初の段階で締結されますか?</h2>
+      <div class="faq-q-body">
+        <p>ご希望があれば、ご相談の前段階で NDA を締結することも可能です。当社は標準的な NDA テンプレートを用意しており、貴社のご要望に応じて修正・追記も可能です。</p>
+        <p>NDA は、<b>貴社の技術情報と当社の事業情報の双方を守るための双方向の契約</b> として位置付けております。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 12 -->
+<section class="faq-q alt" id="q12">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°12</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q12. 契約はどのような形になりますか?</h2>
+      <div class="faq-q-body">
+        <p>業務委託契約(基本契約 + 個別案件)を中心に、品質管理覚書、NDA を組み合わせた包括的な契約を整備しております。<b>弁護士事務所のレビューを経た、双方の利益を守る契約フレーム</b> をご用意しております。</p>
+        <p>契約のサンプルは、初回ご相談時に共有可能です。貴社の社内手続きに応じた十分なレビュー期間をご確保いただけます。<b>一方的に貴社不利な条件を盛り込むことはございません。</b></p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 13 -->
+<section class="faq-q" id="q13">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°13</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q13. お見積りまでの流れを教えてください。</h2>
+      <div class="faq-q-body">
+        <p>以下のステップで進めさせていただきます:</p>
+        <ol><li>お問い合わせフォーム送信(1 分)</li><li>2 営業日以内のご返信(代表より)</li><li>オンライン or 訪問でのご相談(60〜90 分)</li><li>NDA 締結(ご希望に応じて)</li><li>仕様共有 &amp; 試作(2〜4 週間)</li><li>お見積り &amp; 契約整備</li></ol>
+        <p><b>各ステップで、貴社のご判断で中断・離脱いただいて構いません。</b> お見積りまでの所要期間は、概ね 2〜4 週間です。<b>お急ぎである必要はなく、長くご一緒できる関係を育てたいと考えています。</b></p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 14 -->
+<section class="faq-q alt" id="q14">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°14</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q14. 代表の大野氏に直接相談することは可能ですか?</h2>
+      <div class="faq-q-body">
+        <p>はい、<b>初回のご相談から本発注、そしてその後の長期的なお取引まで、代表が一貫して直接対応</b> いたします。</p>
+        <p>代表は元 Amazon 勤務経験 + 9 カ国の海外マーケット運営経験を持っており、越境 EC の実務的なご相談にも対応可能です。<b>担当者交代によるリセットの心配はございません。</b></p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 15 -->
+<section class="faq-q" id="q15">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°15</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q15. 一旦取引を見送った場合、フォローはありますか?</h2>
+      <div class="faq-q-body">
+        <p>はい、貴社の状況変化に応じていつでもご連絡いただけます。</p>
+        <p>例えば、設備更新のタイミング、新規事業をご検討の時期、後継者の方の方針変更時など、状況が変わった際にお気軽にご連絡ください。</p>
+        <p>当社からのご連絡については、<b>しつこい営業は一切いたしません。</b> 新しい商品企画や事業展開で関連するご案内がある場合のみ、適切なタイミングでお声がけさせていただきます。<b>長期的なお付き合いを大切にしております。</b></p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 16 -->
+<section class="faq-q alt" id="q16">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°16</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q16. アジア本舗の業績はどのような状況ですか?</h2>
+      <div class="faq-q-body">
+        <p>第 11 期(創業 2015 年)で、9 カ国 Amazon マーケットで事業を展開しております。</p>
+        <p>ご希望があれば、<b>決算書のサマリーや金融機関の信用情報もご提示可能</b> です。正確な業績については、貴社の社内手続きに応じて開示させていただきます。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 17 -->
+<section class="faq-q" id="q17">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°17</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q17. 過去にお取引のあったパートナー企業の事例はありますか?</h2>
+      <div class="faq-q-body">
+        <p>はい、合意のもと、随時匿名ケーススタディとしてご共有しております。</p>
+        <p>「立ち上げ前 → 1 年後 → 2 年後」の売上推移、直面した課題、解決手法を構造化した形でご提示可能です。<b>契約解消に至った場合の理由も、透明性をもってお伝えしております。</b></p>
+        <p>初回ご相談時に概要を、NDA 締結後にはより詳細な情報を共有いたします。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 18 -->
+<section class="faq-q alt" id="q18">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°18</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q18. SCANDINOVIA のレビューが多いのはなぜですか?</h2>
+      <div class="faq-q-body">
+        <p>お客様の声を商品作りの起点として、10 年間継続的に改良を続けてきた結果です。</p>
+        <p>9 カ国の累計 <b>15,000 件超のレビュー</b> から、形状の改良、色のラインアップ、耐久性向上など、<b>SCANDINOVIA の今の品質基準が育っております</b>。</p>
+        <p>これらの声は、当社の新商品企画の最も重要なインプットでもあります。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 19 -->
+<section class="faq-q" id="q19">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°19</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q19. プラスチック規制への対応はどうされていますか?</h2>
+      <div class="faq-q-body">
+        <p>SCANDINOVIA の「壊れない=長く使う」という設計思想は、EU PPWR(包装・包装廃棄物規則)、各国の使い捨てプラスチック規制など、世界的なプラスチック規制の方向性と整合しております。</p>
+        <p>「<b>壊れない = 長く使う = 環境負荷低減</b>」という LCA(Life Cycle Assessment)ストーリーは、海外市場でのブランド訴求の核でもあります。<b>規制強化が進むほど、SCANDINOVIA の相対的優位が高まる構造</b> であり、「<b>規制対応済みブランド</b>」としてのポジションを早期に確立しております。</p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Q&A 20 -->
+<section class="faq-q alt" id="q20">
+  <div class="wrap faq-q-frame">
+    <div class="faq-q-label">
+      <span>Q&amp;A</span>
+      <span class="no">N°20</span>
+    </div>
+    <div class="faq-q-head">
+      <h2 class="faq-q-title">Q20. 補助金活用のサポートはありますか?</h2>
+      <div class="faq-q-body">
+        <p>はい、ご希望に応じて中小企業診断士などの専門家をご紹介可能です。</p>
+        <p>ものづくり補助金(金型変更・設備投資)、事業再構築補助金(新規事業展開)、IT 導入補助金(業務システム)など、新商品開発や設備投資に伴う <b>初期投資を国の制度で実質補填</b> することが可能なケースが多くございます。</p>
+        <p>補助金申請の最終判断は、貴社のお考えで決めていただけます。<b>当社が一方的に推奨することはございません。</b></p>
+      </div>
+      <div class="faq-q-toplink"><a href="#toc">↑ 目次へ戻る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="kicker-c">Direct contact</div>
+      <h2>ご質問への直接回答も承ります</h2>
+      <p>
+        本ページの Q&amp;A で解決しないご質問は、お気軽にお問い合わせください。<br>
+        ご相談は<span class="form-ref nb">お問い合わせフォーム</span>より。<span class="nb">通常 2 営業日以内</span>にご返信いたします。
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="cta-coral" href="/contact">
+        <span class="left">
+          お問い合わせフォームへ
+          <span class="small">/contact — typical reply within 2 business days</span>
+        </span>
+        <span class="arr">───→</span>
+      </a>
+      <div class="cta-direct">
+        <div class="k">Direct</div>
+        <div class="v">info@asiahonpo.co.jp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">株式会社アジア本舗</div>
+        <span class="en">ASIA HONPO CO., LTD.</span>
+        <div class="addr">
+          〒171-0031 東京都豊島区目白2-3-15<br>
+          ソフィア目白 1003号
+        </div>
+        <div class="reg">
+          EST. 2015 — JAPAN<br>
+          BRAND : SCANDINOVIA® / 9 MARKETS
+        </div>
+      </div>
+      <div class="foot-col">
+        <h6>Sitemap</h6>
+        <ul>
+          <li><a href="/">Home<span class="sub">ホーム</span></a></li>
+          <li><a href="/business">事業について<span class="sub">Our business</span></a></li>
+          <li><a href="/company">会社概要<span class="sub">Company profile</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>More</h6>
+        <ul>
+          <li><a href="/journal">越境ECで、10年やってきて。<span class="sub">10 years in cross-border EC</span></a></li>
+          <li><a href="/contact">お問い合わせ<span class="sub">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h6>Markets</h6>
+        <ul>
+          <li><a>JP / US / CA / MX<span class="sub">Amazon channels</span></a></li>
+          <li><a>UK / DE / FR / IT / ES<span class="sub">Amazon channels</span></a></li>
+          <li><a><span class="nb">Amazon倉庫の拠点</span> — <span class="nb">米国 / 英国 / フランス / 日本</span><span class="sub">Fulfillment network</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2015–2026 ASIA HONPO CO., LTD. ALL RIGHTS RESERVED.</div>
+      <div class="legal">
+        <a href="/privacy">PRIVACY POLICY</a>
+        <a href="/tokutei">特定商取引法に基づく表記</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

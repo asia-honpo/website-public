@@ -10,6 +10,44 @@
 
 ---
 
+## [v2.1.0] - 2026-05-23
+
+### Added — 製造パートナー候補向け FAQ ページ新規追加
+
+製造パートナー候補の皆様(中小日用品製造業の経営者)からよくいただくご質問 20 件をまとめた専用 FAQ ページを新規追加。journal.html の design system(3-column grid、CSS 変数、Noto Serif JP / Cormorant Garamond)を完全踏襲し、サイト全体の一貫性を維持。
+
+#### Added
+- **`factory-partner-faq.html`** (新規、39KB):
+  - 製造パートナー候補向け FAQ ページ(8 ページ目)
+  - 20 件の Q&A(既存取引、工場規模、所在地、年間発注規模、為替、品質基準、金型、契約、見積りフロー、補助金 等)
+  - 構造: Hero → Lead → Index(TOC、Q1-Q20 リンク)→ Q&A 20 件 → CTA
+  - design system: journal.html 完全準拠 3-column grid(240px label + 720px content + 1fr 余白)
+  - FAQ 専用 CSS(4.4KB)を `<head>` に注入、`.faq-lead-frame` / `.faq-toc-frame` / `.faq-q-frame` 構成
+  - Mobile responsive(@media 900px breakpoint で 1-column collapse)
+  - JavaScript 依存ゼロ(全展開型、anchor link のみで navigation)
+
+#### Changed
+- **`business.html` / `company.html` / `contact.html`**: footer 直前に
+  factory-partner-faq への soft link 追加(50px padding、warm background、center alignment)
+- 累計レビュー数訴求を **6,000 件 → 15,000 件超** に更新(brain-public SWOT/Cross_SWOT と整合)
+
+### Process
+- KODAWARI 案 η Deep(Reader Experience KODAWARI)を新規確立し適用:両ペルソナ A/B シミュレーション、Phase τ/υ/φ/χ/ψ の 5 段階、致命的 Friction 0 件で公開可判定
+- CSS 設計を 3 回 iteration で最適化:v2(essay-section 流用、padding 過大)→ v3(独自 compact CSS、幅狭)→ v4(journal.html 完全準拠 3-col grid)
+- Python deploy script による KODAWARI 7-Phase 安全設計:Pre-check / Backup / Template Read / Content Build / Generate / Self-Healing Soft Link / Post-verify
+
+### Pattern Library 候補(本 release で 3 件新規)
+- `mcp-verify-protocol-v1`: MCP filesystem write 後は必ず view で書き込み verify
+- `reader-experience-kodawari-eta-process-v1`: 読み手体験 KODAWARI プロセス(τ→υ→φ→χ→ψ)、両ペルソナ並行シミュレーション
+- `css-context-aware-reuse-v1`: 既存 CSS を文脈無視で流用すると失敗する。20 件の短い Q&A は、3 件の長文 essay 用 CSS と本質的に違う文脈
+
+### Reference
+- commit: TBD(次の commit で確定)
+- 関連: brain-public `17_STRATEGY/SWOT_Analysis.md` + `Cross_SWOT_Analysis.md` の数字整合(15,000 件超)
+- 関連: brain-public `08_PLAYBOOKS_AND_SOPS/factory_partner_faq_v2.1.md`(Q&A データソース)
+
+---
+
 ## [v2.0.0] - 2026-05-21 🎉 PRODUCTION CUTOVER
 
 ### Major Milestone
