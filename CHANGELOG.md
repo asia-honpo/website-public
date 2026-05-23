@@ -10,6 +10,47 @@
 
 ---
 
+## [v2.1.2] - 2026-05-23
+
+### Fixed — Live 目視後の 4 課題改善(Phase A)
+
+v2.1.1 Live 反映後、CEO が iMac 5K で実機目視確認 → 7 つの観察点を整理 → Phase A(HTML upload 不要な軽微変更)4 課題を 1 commit に統合。残り Phase B(business.html 改行)+ Phase C(世界地図)は別 commit で対応予定。
+
+#### Changed
+- **`index.html`** ① CTA section の FAQ link 視認性向上:
+  - `.cta-faq-link{color:var(--ink) → var(--coral)}` 変更
+  - editorial subtle 維持しつつ、coral color で確実に discoverable に
+- **`company.html`** ⑤ Hero subtitle 表現変更:
+  - 「裏取りに、誠実に応える。事実を、そのままに。」→「事実を、そのままに。」
+  - 「裏取り」(後ろ向き語感)を削除、前向き short editorial に
+- **`company.html`** ⑥ Fact sheet 整理:
+  - `— 07 / Former HQ`(旧本店所在地、大阪府吹田市)ブロック削除
+  - 沿革 timeline N°02 に「2015 大阪設立」「2021 東京集約」既述のため重複情報を Fact sheet から除外
+  - 番号リナンバリング:08 / Fiscal year-end → 07、09 / Contact → 08(連番維持)
+- **`journal.html`** ⑦ Hero タイトル font-size 統一:
+  - `.page-hero h1{font-size:84px → 54px}`(他ページと統一)
+  - `margin:0 0 36px → 28px`(font-size に比例して visual proportion 維持)
+  - mobile `font-size:54px → 42px`(@media 900px breakpoint)
+
+### Process
+- KODAWARI 多段階確認による方針決定:
+  - ① 3 案(font-weight / coral color / 太い下線)→ **B 案**(coral color)選定
+  - ⑤ 4 案(短く direct / 問いかけ / transparency / 削除)→ **A 案**(短く direct、現状の後半のみ残す)選定
+  - ⑥ 削除推奨 → timeline で歴史既述 + Fact sheet は「今」を示す editorial design 哲学 → **削除 + リナンバリング** 確定
+  - ⑦ 統一推奨 → company.html と同サイズの 54px に統一 → **採用**
+- Python deploy script による KODAWARI 7-Phase 安全設計(Pre-check / Backup×3 / 課題別 4 Phase / Post-verify 16 checks)
+- 3 ファイル 6 置換 を 1 atomic commit に統合
+
+### Pattern Library 候補(本 release で 1 件新規)
+- `visual-proportion-cascade-v1`: font-size を変更する際、margin / padding / line-height も比例して調整して visual proportion を維持するパターン。journal.html h1 を 84px → 54px に変える際、margin も 36px → 28px に同時調整した事例(54/84 ≈ 0.64、28/36 ≈ 0.78 で近い比率)。CSS の atomic 変更ではなく cascade で考える設計原則。
+
+### Reference
+- commit: TBD(次の commit で確定)
+- 前 release: v2.1.1(index.html stats wrap + CTA FAQ link、commit ccd54d9)
+- progressive な改善:v2.1.0(FAQ ページ新規)→ v2.1.1(Home 構造改善)→ v2.1.2(Live 目視後の細部 4 課題)
+
+---
+
 ## [v2.1.1] - 2026-05-23
 
 ### Fixed — Home ページ index.html の構造改善
