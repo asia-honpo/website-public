@@ -10,6 +10,44 @@
 
 ---
 
+## [v2.1.1] - 2026-05-23
+
+### Fixed — Home ページ index.html の構造改善
+
+v2.1.0(factory-partner-faq.html 新規追加)に続く、Home ページの 2 つの未解決課題に対応。
+
+#### Changed
+- **`index.html`** Stats section 構造統一(課題 1):
+  - `<section class="stats">` の中身を `<div class="wrap">` でラップ → viewport 全幅 → `--max: 1240px` 固定
+  - 他セクション(Hero / About / History / CTA / Footer)と完全整合
+  - 背景帯(warm beige + border-top/bottom)は全幅維持(C 案 editorial design pattern)
+- **`index.html`** CTA section 本文中に FAQ link を inline 追加(課題 2):
+  - 「まずは `<a class="cta-faq-link">よくあるご質問</a>` もご一読の上、...」
+  - business/company/contact の footer 直前 soft link block と異なり、Home 限定の subtle inline link
+  - target audience(製造パートナー候補)だけが気づく editorial design
+
+#### Added
+- **`index.html`** CSS: `.cta-faq-link` スタイル定義
+  - color: var(--ink) + border-bottom: 1px solid var(--coral)
+  - hover: opacity 0.65 transition
+  - editorial subtle: 注意深い読者だけが気づく、CTA への誘導を維持しつつ FAQ にも導く
+
+### Process
+- KODAWARI 多段階確認による方針決定:
+  - 課題 1: **C-2 案**(.wrap でラップ、HTML 構造統一)→ C-1(CSS のみ)より設計一貫性優先
+  - 課題 2: **B 案**(CTA inline link)→ A 案(Header nav)却下、C 案(footer 直前 block)より CTA 効果保持を優先
+- Python deploy script による KODAWARI 7-Phase 安全設計(Pre-check / Backup / Stats wrap / CTA link / CSS / Post-verify / Diff summary)
+- Idempotency-aware safe_replace:既適用時は skip(2 回実行しても安全)
+
+### Pattern Library 候補(本 release で 1 件新規)
+- `editorial-subtle-inline-link-v1`: 対象読者だけが気づく inline link の設計パターン(ink color + coral underline、font-weight/family 変更なし)。本文の流れを断ち切らず、target audience に対して subtle に第 2 動線を提供する editorial design。
+
+### Reference
+- commit: TBD(次の commit で確定)
+- 関連: 前 release v2.1.0(factory-partner-faq.html)に対する Home ページ整合性対応
+
+---
+
 ## [v2.1.0] - 2026-05-23
 
 ### Added — 製造パートナー候補向け FAQ ページ新規追加
